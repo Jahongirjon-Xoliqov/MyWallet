@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A218BC12BA5AB14004DB41D /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A218BC02BA5AB14004DB41D /* ActionButton.swift */; };
 		0A8E015B2B93BA71006086BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E015A2B93BA71006086BB /* AppDelegate.swift */; };
 		0A8E015D2B93BA71006086BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E015C2B93BA71006086BB /* SceneDelegate.swift */; };
 		0A8E015F2B93BA71006086BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E015E2B93BA71006086BB /* ViewController.swift */; };
 		0A8E01622B93BA71006086BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8E01602B93BA71006086BB /* Main.storyboard */; };
 		0A8E01642B93BA72006086BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A8E01632B93BA72006086BB /* Assets.xcassets */; };
 		0A8E01672B93BA72006086BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8E01652B93BA72006086BB /* LaunchScreen.storyboard */; };
+		0A8E01752B93BE80006086BB /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E01732B93BE80006086BB /* TestViewController.swift */; };
+		0A8E01762B93BE80006086BB /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A8E01742B93BE80006086BB /* TestViewController.xib */; };
+		0A8E01792B93BF25006086BB /* MonitoringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E01772B93BF25006086BB /* MonitoringViewController.swift */; };
+		0A8E017A2B93BF25006086BB /* MonitoringViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A8E01782B93BF25006086BB /* MonitoringViewController.xib */; };
+		0A8E017C2B93BFB2006086BB /* PieSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E017B2B93BFB2006086BB /* PieSlice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A218BC02BA5AB14004DB41D /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		0A8E01572B93BA71006086BB /* MyWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A8E015A2B93BA71006086BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A8E015C2B93BA71006086BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +31,11 @@
 		0A8E01632B93BA72006086BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A8E01662B93BA72006086BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A8E01682B93BA72006086BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A8E01732B93BE80006086BB /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		0A8E01742B93BE80006086BB /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
+		0A8E01772B93BF25006086BB /* MonitoringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringViewController.swift; sourceTree = "<group>"; };
+		0A8E01782B93BF25006086BB /* MonitoringViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MonitoringViewController.xib; sourceTree = "<group>"; };
+		0A8E017B2B93BFB2006086BB /* PieSlice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieSlice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A218BBF2BA5AB03004DB41D /* ActionButton */ = {
+			isa = PBXGroup;
+			children = (
+				0A218BC02BA5AB14004DB41D /* ActionButton.swift */,
+			);
+			path = ActionButton;
+			sourceTree = "<group>";
+		};
 		0A8E014E2B93BA71006086BB = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +76,7 @@
 		0A8E01592B93BA71006086BB /* MyWallet */ = {
 			isa = PBXGroup;
 			children = (
+				0A218BBF2BA5AB03004DB41D /* ActionButton */,
 				0A8E015A2B93BA71006086BB /* AppDelegate.swift */,
 				0A8E015C2B93BA71006086BB /* SceneDelegate.swift */,
 				0A8E015E2B93BA71006086BB /* ViewController.swift */,
@@ -63,6 +84,11 @@
 				0A8E01632B93BA72006086BB /* Assets.xcassets */,
 				0A8E01652B93BA72006086BB /* LaunchScreen.storyboard */,
 				0A8E01682B93BA72006086BB /* Info.plist */,
+				0A8E01732B93BE80006086BB /* TestViewController.swift */,
+				0A8E01742B93BE80006086BB /* TestViewController.xib */,
+				0A8E01772B93BF25006086BB /* MonitoringViewController.swift */,
+				0A8E01782B93BF25006086BB /* MonitoringViewController.xib */,
+				0A8E017B2B93BFB2006086BB /* PieSlice.swift */,
 			);
 			path = MyWallet;
 			sourceTree = "<group>";
@@ -126,7 +152,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A8E01672B93BA72006086BB /* LaunchScreen.storyboard in Resources */,
+				0A8E017A2B93BF25006086BB /* MonitoringViewController.xib in Resources */,
 				0A8E01642B93BA72006086BB /* Assets.xcassets in Resources */,
+				0A8E01762B93BE80006086BB /* TestViewController.xib in Resources */,
 				0A8E01622B93BA71006086BB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,8 +167,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A8E015F2B93BA71006086BB /* ViewController.swift in Sources */,
+				0A8E01792B93BF25006086BB /* MonitoringViewController.swift in Sources */,
 				0A8E015B2B93BA71006086BB /* AppDelegate.swift in Sources */,
+				0A8E017C2B93BFB2006086BB /* PieSlice.swift in Sources */,
+				0A8E01752B93BE80006086BB /* TestViewController.swift in Sources */,
 				0A8E015D2B93BA71006086BB /* SceneDelegate.swift in Sources */,
+				0A218BC12BA5AB14004DB41D /* ActionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
