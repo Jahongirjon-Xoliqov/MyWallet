@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0A218BC12BA5AB14004DB41D /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A218BC02BA5AB14004DB41D /* ActionButton.swift */; };
+		0A218BC52BA5CADB004DB41D /* TestActionButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A218BC32BA5CADA004DB41D /* TestActionButtonsViewController.swift */; };
+		0A218BC62BA5CADB004DB41D /* TestActionButtonsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A218BC42BA5CADA004DB41D /* TestActionButtonsViewController.xib */; };
+		0A218BC92BA5CE38004DB41D /* NSAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A218BC82BA5CE38004DB41D /* NSAttributedString+Extension.swift */; };
+		0A218BCB2BA5D02C004DB41D /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A218BCA2BA5D02C004DB41D /* Font.swift */; };
 		0A8E015B2B93BA71006086BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E015A2B93BA71006086BB /* AppDelegate.swift */; };
 		0A8E015D2B93BA71006086BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E015C2B93BA71006086BB /* SceneDelegate.swift */; };
 		0A8E015F2B93BA71006086BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E015E2B93BA71006086BB /* ViewController.swift */; };
@@ -23,6 +27,10 @@
 
 /* Begin PBXFileReference section */
 		0A218BC02BA5AB14004DB41D /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		0A218BC32BA5CADA004DB41D /* TestActionButtonsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestActionButtonsViewController.swift; sourceTree = "<group>"; };
+		0A218BC42BA5CADA004DB41D /* TestActionButtonsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestActionButtonsViewController.xib; sourceTree = "<group>"; };
+		0A218BC82BA5CE38004DB41D /* NSAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extension.swift"; sourceTree = "<group>"; };
+		0A218BCA2BA5D02C004DB41D /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		0A8E01572B93BA71006086BB /* MyWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A8E015A2B93BA71006086BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A8E015C2B93BA71006086BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +65,14 @@
 			path = ActionButton;
 			sourceTree = "<group>";
 		};
+		0A218BC72BA5CE13004DB41D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0A218BC82BA5CE38004DB41D /* NSAttributedString+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		0A8E014E2B93BA71006086BB = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +92,8 @@
 		0A8E01592B93BA71006086BB /* MyWallet */ = {
 			isa = PBXGroup;
 			children = (
+				0A218BCA2BA5D02C004DB41D /* Font.swift */,
+				0A218BC72BA5CE13004DB41D /* Extensions */,
 				0A218BBF2BA5AB03004DB41D /* ActionButton */,
 				0A8E015A2B93BA71006086BB /* AppDelegate.swift */,
 				0A8E015C2B93BA71006086BB /* SceneDelegate.swift */,
@@ -89,6 +107,8 @@
 				0A8E01772B93BF25006086BB /* MonitoringViewController.swift */,
 				0A8E01782B93BF25006086BB /* MonitoringViewController.xib */,
 				0A8E017B2B93BFB2006086BB /* PieSlice.swift */,
+				0A218BC32BA5CADA004DB41D /* TestActionButtonsViewController.swift */,
+				0A218BC42BA5CADA004DB41D /* TestActionButtonsViewController.xib */,
 			);
 			path = MyWallet;
 			sourceTree = "<group>";
@@ -155,6 +175,7 @@
 				0A8E017A2B93BF25006086BB /* MonitoringViewController.xib in Resources */,
 				0A8E01642B93BA72006086BB /* Assets.xcassets in Resources */,
 				0A8E01762B93BE80006086BB /* TestViewController.xib in Resources */,
+				0A218BC62BA5CADB004DB41D /* TestActionButtonsViewController.xib in Resources */,
 				0A8E01622B93BA71006086BB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,10 +187,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A218BC92BA5CE38004DB41D /* NSAttributedString+Extension.swift in Sources */,
 				0A8E015F2B93BA71006086BB /* ViewController.swift in Sources */,
+				0A218BCB2BA5D02C004DB41D /* Font.swift in Sources */,
 				0A8E01792B93BF25006086BB /* MonitoringViewController.swift in Sources */,
 				0A8E015B2B93BA71006086BB /* AppDelegate.swift in Sources */,
 				0A8E017C2B93BFB2006086BB /* PieSlice.swift in Sources */,
+				0A218BC52BA5CADB004DB41D /* TestActionButtonsViewController.swift in Sources */,
 				0A8E01752B93BE80006086BB /* TestViewController.swift in Sources */,
 				0A8E015D2B93BA71006086BB /* SceneDelegate.swift in Sources */,
 				0A218BC12BA5AB14004DB41D /* ActionButton.swift in Sources */,
@@ -324,7 +348,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = XJAXU932F4;
+				DEVELOPMENT_TEAM = 8996593D3H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyWallet/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -353,7 +377,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = XJAXU932F4;
+				DEVELOPMENT_TEAM = 8996593D3H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyWallet/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

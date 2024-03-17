@@ -195,61 +195,62 @@ class ActionButton: UIButton {
     
 }
 
-/*
+
 class BottomImageActionButton: ActionButton {
     override func configureContentView() {
         addSubview(customTitleLabel)
         customTitleLabel.numberOfLines = 2
-        customTitleLabel.anchor(top: topAnchor,
-                                leading: leadingAnchor,
-                                bottom: nil,
-                                trailing: trailingAnchor)
+        customTitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        customTitleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
+        customTitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
+        customTitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
+        
         addSubview(customImageView)
-        customImageView.constrainWidth(35)
-        customImageView.constrainHeight(35)
-        customImageView.centerXTo(centerXAnchor)
-        customImageView.anchor(top: customTitleLabel.bottomAnchor,
-                               leading: nil,
-                               bottom: bottomAnchor,
-                               trailing: nil)
+        customImageView.translatesAutoresizingMaskIntoConstraints = false
+        customImageView.widthAnchor.constraint(equalToConstant: 35).isActive = true
+        customImageView.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        customImageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        customImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10).isActive = true
+        customImageView.topAnchor.constraint(equalTo: customTitleLabel.bottomAnchor, constant: 10).isActive = true
     }
 }
 
 class LeftAlignedActionButton: ActionButton {
     override func configureContentView() {
         addSubview(customImageView)
-        customImageView.constrainWidth(35)
-        customImageView.constrainHeight(35)
-        customImageView.anchor(top: topAnchor,
-                               leading: leadingAnchor,
-                               bottom: nil,
-                               trailing: nil)
+        customImageView.translatesAutoresizingMaskIntoConstraints = false
+        customImageView.widthAnchor.constraint(equalToConstant: 35).isActive = true
+        customImageView.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        customImageView.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
+        customImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
         
         addSubview(customTitleLabel)
         customTitleLabel.numberOfLines = 2
-        customTitleLabel.anchor(top: customImageView.bottomAnchor,
-                                leading: leadingAnchor,
-                                bottom: bottomAnchor,
-                                trailing: trailingAnchor)
+        customTitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        customTitleLabel.topAnchor.constraint(equalTo: customImageView.bottomAnchor, constant: 10).isActive = true
+        customTitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
+        customTitleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10).isActive = true
+        customTitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
+        
     }
 }
 
 class RightAlignedActionButton: ActionButton {
     override func configureContentView() {
         addSubview(customImageView)
-        customImageView.constrainWidth(35)
-        customImageView.constrainHeight(35)
-        customImageView.anchor(top: topAnchor,
-                               leading: nil,
-                               bottom: nil,
-                               trailing: trailingAnchor)
+        customImageView.translatesAutoresizingMaskIntoConstraints = false
+        customImageView.widthAnchor.constraint(equalToConstant: 35).isActive = true
+        customImageView.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        customImageView.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
+        customImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
         
         addSubview(customTitleLabel)
         customTitleLabel.numberOfLines = 2
-        customTitleLabel.anchor(top: customImageView.bottomAnchor,
-                                leading: leadingAnchor,
-                                bottom: bottomAnchor,
-                                trailing: trailingAnchor)
+        customTitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        customTitleLabel.topAnchor.constraint(equalTo: customImageView.bottomAnchor, constant: 10).isActive = true
+        customTitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
+        customTitleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10).isActive = true
+        customTitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
     }
 }
 
@@ -259,18 +260,16 @@ class IdentityActionButton: ActionButton {
         
         addSubview(customTitleLabel)
         customTitleLabel.numberOfLines = 2
+        customTitleLabel.translatesAutoresizingMaskIntoConstraints = false
         customTitleLabel.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 15).isActive = true
-        customTitleLabel.centerYTo(centerYAnchor)
+        customTitleLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         
         addSubview(customImageView)
-        customImageView.constrainWidth(20)
-        customImageView.constrainHeight(20)
-        customImageView.centerYTo(centerYAnchor)
-        customImageView.anchor(top: nil,
-                               leading: nil,
-                               bottom: nil,
-                               trailing: customTitleLabel.leadingAnchor,
-                               padding: .allSides(10))
+        customImageView.translatesAutoresizingMaskIntoConstraints = false
+        customImageView.widthAnchor.constraint(equalToConstant: 20).isActive = true
+        customImageView.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        customImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        customImageView.trailingAnchor.constraint(equalTo: customTitleLabel.leadingAnchor, constant: -10).isActive = true
         
     }
 }
@@ -283,24 +282,22 @@ class IdentityRightAlignedActionButton: ActionButton {
         
         addSubview(customTitleLabel)
         customTitleLabel.numberOfLines = 2
+        customTitleLabel.translatesAutoresizingMaskIntoConstraints = false
         customTitleLabel.centerXAnchor.constraint(equalTo: centerXAnchor, constant: -15).isActive = true
-        customTitleLabel.centerYTo(centerYAnchor)
+        customTitleLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         
         addSubview(customImageView)
-        customImageView.constrainWidth(20)
-        customImageView.constrainHeight(20)
-        customImageView.centerYTo(centerYAnchor)
-        customImageView.anchor(top: nil,
-                               leading: customTitleLabel.trailingAnchor,
-                               bottom: nil,
-                               trailing: nil,
-                               padding: .allSides(10))
+        customImageView.translatesAutoresizingMaskIntoConstraints = false
+        customImageView.widthAnchor.constraint(equalToConstant: 20).isActive = true
+        customImageView.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        customImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        customImageView.leadingAnchor.constraint(equalTo: customTitleLabel.trailingAnchor, constant: 10).isActive = true
         
         gradientLayer = CAGradientLayer()
         gradientLayer?.startPoint = CGPoint(x: 0.5, y: 0)
         gradientLayer?.endPoint = CGPoint(x: 0.5, y: 1)
         layer.insertSublayer(gradientLayer ?? CALayer(), at: 0)
-        
+     
     }
     
     override func userIsHoldingTouch() {
@@ -323,12 +320,14 @@ class IdentityRightAlignedActionButton: ActionButton {
     override var isEnabled: Bool {
         didSet {
             if isEnabled {
-                gradientLayer?.colors = Theme.current.primaryActiveButton
+                gradientLayer?.colors = [UIColor.systemOrange.cgColor,
+                                         UIColor.systemPink.cgColor]
             } else {
-                gradientLayer?.colors = Theme.current.nextBtnInitialColors
+                gradientLayer?.colors = [UIColor.cyan.cgColor,
+                                         UIColor.blue.cgColor]
             }
         }
     }
     
 }
-*/
+
