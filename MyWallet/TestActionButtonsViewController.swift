@@ -17,6 +17,7 @@ class TestActionButtonsViewController: UIViewController {
     @IBOutlet weak var identityActionButton: IdentityActionButton!
     @IBOutlet weak var identityRightActionButton: IdentityRightAlignedActionButton!
     
+    @IBOutlet weak var realButton: RealButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,15 +27,15 @@ class TestActionButtonsViewController: UIViewController {
         simpleActionButton.setImage(UIImage(systemName: "books.vertical.fill"), tintColor: .blue)
         simpleActionButton.setAttributedTitle(Attr(text: "New action\nfor button", color: .darkText, font: .MONTSERRAT_REGULAR, size: 14, align: .center))
         simpleActionButton.setImage(UIImage.strokedCheckmark, tintColor: .lightGray, for: .highlighted)
-        simpleActionButton.setAttributedTitle(Attr(text: "New action\nfor button", color: .darkText, font: .MONTSERRAT_REGULAR, size: 14, align: .center), for: .highlighted)
+        simpleActionButton.setAttributedTitle(Attr(text: "New action\nfor button", color: .lightGray, font: .MONTSERRAT_REGULAR, size: 14, align: .center), for: .highlighted)
         
         bottomActionButton.clipsToBounds = true
         bottomActionButton.layer.cornerRadius = 10
         bottomActionButton.backgroundColor = .systemGroupedBackground
         bottomActionButton.setImage(UIImage(systemName: "books.vertical.fill"), tintColor: .blue)
-        bottomActionButton.setAttributedTitle(Attr(text: "New action for button this new button title exeeds bounds of uibutton", color: .darkText, font: .MONTSERRAT_REGULAR, size: 14, align: .center))
+        bottomActionButton.setAttributedTitle(Attr(text: "New action\nfor button", color: .darkText, font: .MONTSERRAT_REGULAR, size: 14, align: .center))
         bottomActionButton.setImage(UIImage(systemName: "books.vertical.fill"), tintColor: .lightGray, for: .highlighted)
-        bottomActionButton.setAttributedTitle(Attr(text: "New action\nfor button", color: .darkText, font: .MONTSERRAT_REGULAR, size: 14, align: .center), for: .highlighted)
+        bottomActionButton.setAttributedTitle(Attr(text: "New action\nfor button", color: .lightGray, font: .MONTSERRAT_REGULAR, size: 14, align: .center), for: .highlighted)
         
         leftAlignedActionButton.clipsToBounds = true
         leftAlignedActionButton.layer.cornerRadius = 10
@@ -42,7 +43,7 @@ class TestActionButtonsViewController: UIViewController {
         leftAlignedActionButton.setImage(UIImage(systemName: "books.vertical.fill"), tintColor: .blue)
         leftAlignedActionButton.setAttributedTitle(Attr(text: "New action\nfor button", color: .darkText, font: .MONTSERRAT_REGULAR, size: 14, align: .left))
         leftAlignedActionButton.setImage(UIImage(systemName: "books.vertical.fill"), tintColor: .lightGray, for: .highlighted)
-        leftAlignedActionButton.setAttributedTitle(Attr(text: "New action\nfor button", color: .darkText, font: .MONTSERRAT_REGULAR, size: 14, align: .left), for: .highlighted)
+        leftAlignedActionButton.setAttributedTitle(Attr(text: "New action\nfor button", color: .lightGray, font: .MONTSERRAT_REGULAR, size: 14, align: .left), for: .highlighted)
      
         rightAlignedActionButton.clipsToBounds = true
         rightAlignedActionButton.layer.cornerRadius = 10
@@ -50,7 +51,7 @@ class TestActionButtonsViewController: UIViewController {
         rightAlignedActionButton.setImage(UIImage(systemName: "books.vertical.fill"), tintColor: .blue)
         rightAlignedActionButton.setAttributedTitle(Attr(text: "New action\nfor button", color: .darkText, font: .MONTSERRAT_REGULAR, size: 14, align: .right))
         rightAlignedActionButton.setImage(UIImage(systemName: "books.vertical.fill"), tintColor: .lightGray, for: .highlighted)
-        rightAlignedActionButton.setAttributedTitle(Attr(text: "New action\nfor button", color: .darkText, font: .MONTSERRAT_REGULAR, size: 14, align: .right), for: .highlighted)
+        rightAlignedActionButton.setAttributedTitle(Attr(text: "New action\nfor button", color: .lightGray, font: .MONTSERRAT_REGULAR, size: 14, align: .right), for: .highlighted)
         
         identityActionButton.clipsToBounds = true
         identityActionButton.layer.cornerRadius = 10
@@ -58,7 +59,7 @@ class TestActionButtonsViewController: UIViewController {
         identityActionButton.setImage(UIImage(systemName: "books.vertical.fill"), tintColor: .blue)
         identityActionButton.setAttributedTitle(Attr(text: "New action\nfor button", color: .darkText, font: .MONTSERRAT_REGULAR, size: 14, align: .center))
         identityActionButton.setImage(UIImage(systemName: "books.vertical.fill"), tintColor: .lightGray, for: .highlighted)
-        identityActionButton.setAttributedTitle(Attr(text: "New action\nfor button", color: .darkText, font: .MONTSERRAT_REGULAR, size: 14, align: .center), for: .highlighted)
+        identityActionButton.setAttributedTitle(Attr(text: "New action\nfor button", color: .lightGray, font: .MONTSERRAT_REGULAR, size: 14, align: .center), for: .highlighted)
         
         identityRightActionButton.clipsToBounds = true
         identityRightActionButton.layer.cornerRadius = 10
@@ -66,8 +67,14 @@ class TestActionButtonsViewController: UIViewController {
         identityRightActionButton.setImage(UIImage(systemName: "books.vertical.fill"), tintColor: .blue)
         identityRightActionButton.setAttributedTitle(Attr(text: "New action\nfor button", color: .darkText, font: .MONTSERRAT_REGULAR, size: 14, align: .center))
         identityRightActionButton.setImage(UIImage(systemName: "books.vertical.fill"), tintColor: .lightGray, for: .highlighted)
-        identityRightActionButton.setAttributedTitle(Attr(text: "New action\nfor button", color: .darkText, font: .MONTSERRAT_REGULAR, size: 14, align: .center), for: .highlighted)
-        identityRightActionButton.isEnabled = true
+        identityRightActionButton.setAttributedTitle(Attr(text: "New action\nfor button", color: .lightGray, font: .MONTSERRAT_REGULAR, size: 14, align: .center), for: .highlighted)
+        identityRightActionButton.isEnabled = false
+        
+        realButton.changeContent()
+        realButton.setConstraints()
+        realButton.setImage(UIImage(systemName: "books.vertical.fill"), for: .normal)
+        realButton.setTitle("New real\nfor button", for: .normal)
+        realButton.titleLabel?.textAlignment = .center
         
     }
     

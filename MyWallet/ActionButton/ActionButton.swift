@@ -74,20 +74,20 @@ class ActionButton: UIButton {
     
     func configureContentView() {
         addSubview(customImageView)
-//        customImageView.constrainWidth(35)
-//        customImageView.constrainHeight(35)
-//        customImageView.centerXTo(centerXAnchor)
-//        customImageView.anchor(top: topAnchor,
-//                               leading: nil,
-//                               bottom: nil,
-//                               trailing: nil)
+        customImageView.translatesAutoresizingMaskIntoConstraints = false
+        customImageView.widthAnchor.constraint(equalToConstant: 35).isActive = true
+        customImageView.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        customImageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        customImageView.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
         
         addSubview(customTitleLabel)
-//        customTitleLabel.numberOfLines = 2
-//        customTitleLabel.anchor(top: customImageView.bottomAnchor,
-//                                leading: leadingAnchor,
-//                                bottom: bottomAnchor,
-//                                trailing: trailingAnchor)
+        customTitleLabel.numberOfLines = 2
+        customTitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        customTitleLabel.topAnchor.constraint(equalTo: customImageView.bottomAnchor, constant: 10).isActive = true
+        customTitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
+        customTitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
+        customTitleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10).isActive = true
+        
     }
     
     @objc func userIsHoldingTouch() {

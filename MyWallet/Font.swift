@@ -7,14 +7,23 @@
 
 import UIKit
 
+/*
+ https://gist.github.com/tadija/cb4ec0cbf0a89886d488d1d8b595d0e9
+ *** Arial ***
+ Arial-BoldItalicMT
+ Arial-BoldMT
+ Arial-ItalicMT
+ ArialMT
+ */
+
 enum Font: String {
-    case MONTSERRAT_EXTRABOLD = "Montserrat-ExtraBold"
-    case MONTSERRAT_BOLD      = "Montserrat-Bold"
-    case MONTSERRAT_SEMIBOLD  = "Montserrat-SemiBold"
-    case MONTSERRAT_REGULAR   = "Montserrat-Regular"
-    case MONTSERRAT_MEDIUM    = "Montserrat-Medium"
-    case MONTSERRAT_LIGHT     = "Montserrat-Light"
-    case MONTSERRAT_THIN      = "Montserrat-Thin"
+    case MONTSERRAT_EXTRABOLD = "AvenirNextCondensed-Heavy"
+    case MONTSERRAT_BOLD      = "HelveticaNeue-Bold"
+    case MONTSERRAT_SEMIBOLD  = "AvenirNextCondensed-DemiBold"
+    case MONTSERRAT_REGULAR   = "HelveticaNeue"
+    case MONTSERRAT_MEDIUM    = "HelveticaNeue-Medium"
+    case MONTSERRAT_LIGHT     = "HelveticaNeue-Light"
+    case MONTSERRAT_THIN      = "HelveticaNeue-UltraLight"
     
     static var regular: Font {
         .MONTSERRAT_REGULAR

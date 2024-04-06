@@ -15,6 +15,7 @@
                 <outlet property="identityActionButton" destination="8v2-pg-at5" id="WqZ-zz-TOT"/>
                 <outlet property="identityRightActionButton" destination="mC9-HV-KAx" id="Mpa-Pm-iSf"/>
                 <outlet property="leftAlignedActionButton" destination="18x-bV-FzT" id="1JR-V6-DZW"/>
+                <outlet property="realButton" destination="652-JV-5Ur" id="ouL-qO-D4X"/>
                 <outlet property="rightAlignedActionButton" destination="HS2-b0-0H6" id="JDE-VQ-r5p"/>
                 <outlet property="simpleActionButton" destination="g8q-hx-Xbh" id="s5m-Ei-VJG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -29,7 +30,7 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="o9y-YE-TU9">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="580"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="700"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8q-hx-Xbh" customClass="ActionButton" customModule="MyWallet" customModuleProvider="target">
                                     <rect key="frame" x="146.66666666666666" y="0.0" width="100" height="100"/>
@@ -41,8 +42,9 @@
                                     <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qr6-dN-KOC" customClass="BottomImageActionButton" customModule="MyWallet" customModuleProvider="target">
-                                    <rect key="frame" x="159" y="120" width="75" height="100"/>
+                                    <rect key="frame" x="146.66666666666666" y="120" width="100" height="100"/>
                                     <constraints>
+                                        <constraint firstAttribute="width" constant="100" id="1dg-ig-W1r"/>
                                         <constraint firstAttribute="height" constant="100" id="nny-VH-V1q"/>
                                     </constraints>
                                     <state key="normal" title="Button"/>
@@ -79,6 +81,16 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="BUM-cP-6oX"/>
                                     </constraints>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="652-JV-5Ur" customClass="RealButton" customModule="MyWallet" customModuleProvider="target">
+                                    <rect key="frame" x="146.66666666666666" y="600" width="100" height="100"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="100" id="4hz-zn-CXC"/>
+                                        <constraint firstAttribute="width" constant="100" id="jho-gK-ScM"/>
+                                    </constraints>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 </button>
