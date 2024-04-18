@@ -7,14 +7,4 @@
 
 import UIKit
 
-extension UIView {
-    var center: CGPoint {
-        frame.center
-    }
-    var width: CGFloat {
-        frame.width
-    }
-    var height: CGFloat {
-        frame.height
-    }
-}
+
