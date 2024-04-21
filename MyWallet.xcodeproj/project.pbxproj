@@ -32,6 +32,7 @@
 		0A8E01762B93BE80006086BB /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A8E01742B93BE80006086BB /* TestViewController.xib */; };
 		0A8E01792B93BF25006086BB /* MonitoringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E01772B93BF25006086BB /* MonitoringViewController.swift */; };
 		0A8E017C2B93BFB2006086BB /* PieSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E017B2B93BFB2006086BB /* PieSlice.swift */; };
+		0A9CCB202BD4F06A00E78C33 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9CCB1F2BD4F06A00E78C33 /* ChartView.swift */; };
 		0AB66CE92BCACDC100090A98 /* CGRect+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB66CE82BCACDC100090A98 /* CGRect+Extensions.swift */; };
 		0AB66CEB2BCACDEC00090A98 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB66CEA2BCACDEC00090A98 /* UIView+Extensions.swift */; };
 		0AB66CED2BCAD4F900090A98 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB66CEC2BCAD4F900090A98 /* AppColor.swift */; };
@@ -66,6 +67,7 @@
 		0A8E01742B93BE80006086BB /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		0A8E01772B93BF25006086BB /* MonitoringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringViewController.swift; sourceTree = "<group>"; };
 		0A8E017B2B93BFB2006086BB /* PieSlice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieSlice.swift; sourceTree = "<group>"; };
+		0A9CCB1F2BD4F06A00E78C33 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		0AB66CE82BCACDC100090A98 /* CGRect+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Extensions.swift"; sourceTree = "<group>"; };
 		0AB66CEA2BCACDEC00090A98 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		0AB66CEC2BCAD4F900090A98 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
@@ -94,6 +96,11 @@
 		0A218BC72BA5CE13004DB41D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0A8527DE2BD051F600C26181 /* NSLocking+Sugar.swift */,
+				0A8527D02BCFF6B400C26181 /* AnyOptional.swift */,
+				0A8527CE2BCFF3BA00C26181 /* UserDefaultsBacked.swift */,
+				0A8527D22BCFF88500C26181 /* UserDefaultsExtension.swift */,
+				0A8527D42BCFFBE900C26181 /* UIViewControllerExtension.swift */,
 				0A8527DA2BCFFC9400C26181 /* CGPointExtension.swift */,
 				0A8527D82BCFFC9400C26181 /* CGRectExtensions.swift */,
 				0A8527D92BCFFC9400C26181 /* CGSizeExtension.swift */,
@@ -124,11 +131,6 @@
 		0A8E01592B93BA71006086BB /* MyWallet */ = {
 			isa = PBXGroup;
 			children = (
-				0A8527DE2BD051F600C26181 /* NSLocking+Sugar.swift */,
-				0A8527D02BCFF6B400C26181 /* AnyOptional.swift */,
-				0A8527CE2BCFF3BA00C26181 /* UserDefaultsBacked.swift */,
-				0A8527D22BCFF88500C26181 /* UserDefaultsExtension.swift */,
-				0A8527D42BCFFBE900C26181 /* UIViewControllerExtension.swift */,
 				0A218BCA2BA5D02C004DB41D /* Font.swift */,
 				0A218BC72BA5CE13004DB41D /* Extensions */,
 				0A218BBF2BA5AB03004DB41D /* ActionButton */,
@@ -148,6 +150,7 @@
 				0A218BC42BA5CADA004DB41D /* TestActionButtonsViewController.xib */,
 				0A4304F72BAA2FDC00B4A17C /* RealButton.swift */,
 				0AB66CEC2BCAD4F900090A98 /* AppColor.swift */,
+				0A9CCB1F2BD4F06A00E78C33 /* ChartView.swift */,
 			);
 			path = MyWallet;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				0A8527DB2BCFFC9400C26181 /* CGRectExtensions.swift in Sources */,
 				0A8E015D2B93BA71006086BB /* SceneDelegate.swift in Sources */,
 				0A218BC12BA5AB14004DB41D /* ActionButton.swift in Sources */,
+				0A9CCB202BD4F06A00E78C33 /* ChartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

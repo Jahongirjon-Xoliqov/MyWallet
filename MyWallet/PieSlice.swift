@@ -20,3 +20,25 @@ struct PieSlice {
     private var shadowPath: UIBezierPath
 }
 
+class ChartView: UIView {
+    
+}
+
+class ChartDrawer: NSObject {
+    
+}
+
+
+class ShapeLayer: CAShapeLayer {
+    
+}
+
+func circle(in size: CGSize) -> CALayer {
+    let layer = CALayer()
+    layer.masksToBounds = true
+    layer.cornerRadius = size.height / 2
+    layer.frame = .init(origin: .zero, size: size)
+    return layer
+}
+
+
