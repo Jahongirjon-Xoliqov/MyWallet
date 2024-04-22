@@ -13,140 +13,119 @@ final class MonitoringViewController: UIViewController {
     let personURL = URL(string: "https://thispersondoesnotexist.com")!
     var session: URLSession?
     
+    let yesNoViewModel = YesNoViewModel()
+    let personViewModel = PersonViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let config = URLSessionConfiguration.default
-        config.httpMaximumConnectionsPerHost = 1
-        
-        session = URLSession(configuration: config)
-        
-        
-//        let firstTask = session!.dataTask(with: URLRequest(url: baseURL)) { _, _, _ in
-//            print("first task is completed")
-//        }
-//        firstTask.priority = 0.5
-//        firstTask.resume()
-//        
-//        let secondTask = session!.dataTask(with: URLRequest(url: baseURL)) { _, _, _ in
-//            print("second task is completed")
-//        }
-//        secondTask.priority = 0.5
-//        secondTask.resume()
-//        
-//        
-//        let thirdTask = session!.dataTask(with: URLRequest(url: baseURL)) { _, _, _ in
-//            print("third task is completed")
-//        }
-//        thirdTask.priority = 0.5
-//        thirdTask.resume()
-//        
-//        let importantTask = session!.dataTask(with: URLRequest(url: baseURL)) { _, _, _ in
-//            print("important task is completed")
-//            
-//        }
-//        importantTask.priority = 1
-//        importantTask.resume()
-//        
-        var ss = UserDefaultsBacked<Bool>(key: "token", defaultValue: true)
-        ss.wrappedValue = true
-        TokenManager.shared.request {
-            URLSession.shared.dataTask(with: URLRequest(url: self.baseURL)) { _, _, _ in
-                print("first task is completed")
-            }
-            
-            URLSession.shared.dataTask(with: URLRequest(url: self.baseURL)) { _, _, _ in
-                print("second task is completed")
-            }
-            
-            URLSession.shared.dataTask(with: URLRequest(url: self.baseURL)) { _, _, _ in
-                print("third task is completed")
-            }
-        }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            print("////")
-            TokenManager.shared.request {
-                URLSession.shared.dataTask(with: URLRequest(url: self.baseURL)) { _, _, _ in
-                    print("//// first task is completed")
-                }
-                
-                URLSession.shared.dataTask(with: URLRequest(url: self.baseURL)) { _, _, _ in
-                    print("//// second task is completed")
-                }
-                
-                URLSession.shared.dataTask(with: URLRequest(url: self.baseURL)) { _, _, _ in
-                    print("//// third task is completed")
-                }
-            }
+        executeAfterTokenCheck {
+            self.personViewModel.request(isRefresh: true)
+            self.yesNoViewModel.request(isRefresh: false)
+            self.yesNoViewModel.request(isRefresh: false)
         }
         
     }
     
+    func executeAfterTokenCheck(completion: @escaping () -> ()) {
+        TokenManager.shared.makeTokenRefreshRequestIfNeededAndObserve {
+            completion()
+        }
+    }
+    
+    @objc func tokenDidUpdate() {
+        personViewModel.request(isRefresh: true)
+        yesNoViewModel.request(isRefresh: false)
+        yesNoViewModel.request(isRefresh: false)
+    }
+    
 }
 
-@resultBuilder
-struct URLSessionBuilder {
-    static func buildBlock(_ contents: URLSessionDataTask...) -> [URLSessionDataTask] {
-        contents
+
+class YesNoViewModel {
+    let yesnoURL = URL(string: "https://yesno.wtf/api")!
+    var completion: (() -> ())?
+    func request(isRefresh: Bool) {
+        APIManager.shared.request(url: yesnoURL, isTokenRefresh: isRefresh) {
+            print("yes no is done")
+            self.completion?()
+        }
     }
 }
 
-final class TokenManager {
-    static let shared = TokenManager()
-    private var refreshTask: URLSessionDataTask?
-    private var defaultConcurrentOperations = OperationQueue.defaultMaxConcurrentOperationCount
-    private var serialQueue: OperationQueue = {
-        let queue = OperationQueue()
-        queue.maxConcurrentOperationCount = 1
-        return queue
-    }()
-    private var requiresTokenRefresh: Bool {
-        UserDefaultsBacked<Bool>(key: "token", defaultValue: true).wrappedValue
+class PersonViewModel {
+    let personURL = URL(string: "https://thispersondoesnotexist.com")!
+    var completion: (() -> ())?
+    func request(isRefresh: Bool) {
+        APIManager.shared.request(url: personURL, isTokenRefresh: isRefresh) {
+            print("person is done")
+            self.completion?()
+        }
     }
+}
+
+class APIManager {
+    static let shared = APIManager()
+    private var serialQueue = OperationQueue()
+    
     private init() {}
-    func request(@URLSessionBuilder _ contents: () -> [URLSessionDataTask]) {
-        let tasks = contents()
-        guard requiresTokenRefresh else {
-            self.serialQueue.maxConcurrentOperationCount = defaultConcurrentOperations
-            tasks.forEach { task in
-                self.serialQueue.addOperation {
-                    task.resume()
+    func request(url: URL, isTokenRefresh: Bool, completion: @escaping () -> ()) {
+        
+        serialQueue.addOperation {
+            let request = URLRequest(url: url)
+            let task = URLSession.shared.dataTask(with: request) { _, _, _ in
+                completion()
+                if isTokenRefresh {
+                    
                 }
+            }
+            task.resume()
+        }
+    }
+}
+var notificationName: NSNotification.Name = .init("token.refresh")
+class TokenManager {
+    static let shared = TokenManager()
+    private init() {}
+    private var isRefreshNeeded: Bool {
+        UserDefaultsBacked<Bool>(key: "token", defaultValue: false).wrappedValue
+    }
+    private var refreshTask: URLSessionDataTask = {
+        let urlRequest = URLRequest(url: URL(string: "https://thispersondoesnotexist.com")!)
+        let task = URLSession.shared.dataTask(with: urlRequest) { _, _, _ in
+            NotificationCenter.default.post(name: notificationName, object: nil)
+        }
+        return task
+    }()
+    
+    func execute(observer: Any, selector: Selector) {
+        if isRefreshNeeded {
+            if refreshTask.state == .running {
+                //add
+                add(observer, selector)
+            }
+            if refreshTask.state == .suspended {
+                refreshTask.resume()
+                //add
+                add(observer, selector)
+            }
+            if refreshTask.state == .completed {
+                refreshTask.resume()
+                //add
+                add(observer, selector)
             }
             return
         }
-        
-        if refreshTask == nil {
-            refreshTask = URLSession.shared.dataTask(with: URLRequest(url: URL(string: "https://yesno.wtf/api")!)) { _, _, _ in
-                print("refresh is done")
-                var ss = UserDefaultsBacked<Bool>(key: "token", defaultValue: true)
-                ss.wrappedValue = false
-            }
-            serialQueue.addOperation {
-                self.refreshTask?.resume()
-            }
-            serialQueue.addOperation {
-                self.serialQueue.maxConcurrentOperationCount = 10
-            }
-            tasks.forEach { task in
-                self.serialQueue.addOperation {
-                    task.resume()
-                }
-            }
-        }
-        
-        guard refreshTask?.state == .running else {
-            tasks.forEach { $0.resume() }
-            return
-        }
-        
-        tasks.forEach { task in
-            self.serialQueue.addOperation {
-                task.resume()
-            }
-        }
-        
+        //publish
+        add(observer, selector)
+        NotificationCenter.default.post(name: notificationName, object: nil)
+    }
+    
+    func add(_ observer: Any, _ selector: Selector) {
+        NotificationCenter.default.addObserver(observer,
+                                               selector: selector,
+                                               name: notificationName,
+                                               object: nil)
     }
     
 }
