@@ -8,7 +8,6 @@
 import UIKit
 import SwiftUI
 
-
 struct Product: Identifiable {
     let id = UUID()
     let title: String
@@ -20,49 +19,56 @@ struct UIProduct: Identifiable {
     let id = UUID()
     let title: String
     let revenue: NSNumber
+    let startPoint: NSNumber
     let colors: [String]
 }
 
+let products: [Product] = [
+    .init(title: "Annual", revenue: 20, colors: ["a5078f"]),
+    .init(title: "Monthly", revenue: 40, colors: ["8f00e6"]),
+    .init(title: "Lifetime", revenue: 40, colors: ["cddc42"])
+]
+
+let uiproducts: [UIProduct] = [
+    .init(title: "Annual", revenue: 25, startPoint: 0,  colors: ["#2DD4BF", "#2DD4BF"]),
+    .init(title: "Monthly", revenue: 40, startPoint: 25, colors: ["#FACC15", "#FACC15"]),
+    .init(title: "Lifetime", revenue: 35, startPoint: 65, colors: ["#685FFF", "#685FFF"])
+]
+
 final class MonitoringViewController: UIViewController {
+    
+    @IBOutlet weak var chartView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        let products: [Product] = [
-            .init(title: "Annual", revenue: 70, colors: ["a5078f"]),
-            .init(title: "Monthly", revenue: 20, colors: ["8f00e6"]),
-            .init(title: "Lifetime", revenue: 10, colors: ["cddc42"])
-        ]
-        
-        let uiproducts: [UIProduct] = [
-            .init(title: "Annual", revenue: 70, colors: ["a5078f", "cddc42"]),
-            .init(title: "Monthly", revenue: 20, colors: ["8f00e6", "a5078f"]),
-            .init(title: "Lifetime", revenue: 10, colors: ["cddc42", "a5078f"])
-        ]
-        
+        title = "Monitoring"
         
         if #available(iOS 18.0, *) {
-            let pieChartView = UIChartView(products: products)
-            let hostingController = UIHostingController(rootView: pieChartView)
-            addChild(hostingController)
-            view.addSubview(hostingController.view)
-            hostingController.view.frame = CGRect(x: view.midX-100, y: view.midY-100, width: 200, height: 200)
-            hostingController.didMove(toParent: self)
+            drawPieChart(with: products)
         } else {
-            // Fallback on earlier versions
-            let pieChartView = UIChartViewForLowerVersions(uiproducts)
-            pieChartView.frame = CGRect(x: view.midX-100, y: view.midY-100, width: 200, height: 200)
-            view.addSubview(pieChartView)
+            drawPieChart(with: uiproducts)
         }
         
         
         
-        
+    }
+    
+    @available(iOS 18.0, *)
+    func drawPieChart(with products : [Product]) {
+        let pieChartView = UIChartView(products: products)
+        let hostingController = UIHostingController(rootView: pieChartView)
+        addChild(hostingController)
+        chartView.addSubview(hostingController.view)
+        hostingController.view.frame = chartView.bounds
+        hostingController.didMove(toParent: self)
+    }
+    
+    func drawPieChart(with uiproducts: [UIProduct]) {
+        // Fallback on earlier versions
+        let pieChartView = UIChartViewForLowerVersions(uiproducts)
+        pieChartView.frame = chartView.bounds
+        chartView.addSubview(pieChartView)
     }
     
 }

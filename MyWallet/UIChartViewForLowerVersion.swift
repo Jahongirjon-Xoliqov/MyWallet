@@ -7,15 +7,31 @@
 
 import UIKit
 
+public class UIChart: UIView {
+    
+    public init<Data, C>(_ data: Data, content: @escaping (Data.Element) -> C)
+    where Data : RandomAccessCollection, C : UISectorMarkProtocol, Data.Element : Identifiable {
+        super.init(frame: .zero)
+        data.forEach {
+            layer.addSublayer(content($0).gradientLayer)
+        }
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
+}
 
 public struct UIPlottableValue<Value: NSNumber> {
     var attr: NSAttributedString
     var value: Value
+    var startValue: Value
     /// Creates a parameter value with label and value.
     /// - Parameter label: The label.
     /// - Parameter value: The parameter's value.
-    public static func value(_ attr: NSAttributedString, _ value: Value) -> UIPlottableValue<Value> {
-        let plottableValue = UIPlottableValue<Value>(attr: attr, value: value)
+    public static func value(_ attr: NSAttributedString, _ value: Value, _ startValue: Value) -> UIPlottableValue<Value> {
+        let plottableValue = UIPlottableValue<Value>(attr: attr, value: value, startValue: startValue)
         return plottableValue
     }
 }
@@ -43,12 +59,15 @@ public struct UISectorMark: UISectorMarkProtocol {
         
         let rect = CGRect(origin: .zero, size: .init(width: 200, height: 200))
         
+        let startAngle = (CGFloat(angleConfigs.startValue.doubleValue * 360 / 100) * CGFloat.pi / 180) - CGFloat.pi/2
+        let endAngle = (CGFloat(angleConfigs.value.doubleValue * 360 / 100) * CGFloat.pi / 180)
+        
         let path = UIBezierPath()
         path.move(to: .init(x: 100, y: 100))
         path.addArc(withCenter: .init(x: 100, y: 100),
                     radius: 100,
-                    startAngle: -CGFloat.pi/2,
-                    endAngle: (CGFloat(angleConfigs.value.doubleValue * 360 / 100) * CGFloat.pi / 180) - CGFloat.pi/2,
+                    startAngle: startAngle,
+                    endAngle: startAngle + endAngle,
                     clockwise: true)
         path.close()
         
@@ -66,7 +85,6 @@ public struct UISectorMark: UISectorMarkProtocol {
         textLayer.truncationMode = .end
         //textLayer.backgroundColor = UIColor.clear.cgColor
         textLayer.foregroundColor = UIColor.black.cgColor
-        
         
         gradientLayer = CAGradientLayer()
         gradientLayer.frame = rect
@@ -87,20 +105,3 @@ public struct UISectorMark: UISectorMarkProtocol {
     }
 
 }
-
-public class UIChart: UIView {
-    
-    public init<Data, C>(_ data: Data, content: @escaping (Data.Element) -> C)
-    where Data : RandomAccessCollection, C : UISectorMarkProtocol, Data.Element : Identifiable {
-        super.init(frame: .zero)
-        data.forEach {
-            layer.addSublayer(content($0).gradientLayer)
-        }
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
-    
-}
-

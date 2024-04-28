@@ -24,13 +24,6 @@ struct UIChartView: View {
             .foregroundStyle(
                 Color(UIColor(hex: product.colors.first!)!)
             )
-            .cornerRadius(5)
-            .foregroundStyle(
-                by: .value(
-                    Text(verbatim: product.title),
-                    product.title
-                )
-            )
         }
     }
     
@@ -46,7 +39,8 @@ final class UIChartViewForLowerVersions: UIView {
             UISectorMark(
                 angle: .value(
                     NSAttributedString(string: "\(product.revenue)"),
-                    product.revenue)
+                    product.revenue,
+                    product.startPoint)
             )
             .foregroundStyle(
                 product.colors.map { UIColor(hex: $0) ?? .black }

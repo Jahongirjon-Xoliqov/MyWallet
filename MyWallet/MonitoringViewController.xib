@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MonitoringViewController" customModule="MyWallet" customModuleProvider="target">
             <connections>
+                <outlet property="chartView" destination="IJm-qf-o1b" id="4m7-Fw-XYd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,8 +19,22 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IJm-qf-o1b">
+                    <rect key="frame" x="412" y="74" width="200" height="200"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="FEe-gq-Vab"/>
+                        <constraint firstAttribute="height" constant="200" id="RqG-5W-90l"/>
+                    </constraints>
+                </view>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="IJm-qf-o1b" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="0YG-Cn-cx6"/>
+                <constraint firstItem="IJm-qf-o1b" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="uu0-sV-q4d"/>
+            </constraints>
             <point key="canvasLocation" x="132" y="-11"/>
         </view>
     </objects>
