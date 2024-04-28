@@ -34,6 +34,15 @@ extension UIView {
         get { frame.height }
         set { frame = frame.with(height: newValue) }
     }
+    
+    public var midX: CGFloat {
+        frame.midX
+    }
+    
+    public var midY: CGFloat {
+        frame.midY
+    }
+    
 }
 
 // MARK: - Corner Radius

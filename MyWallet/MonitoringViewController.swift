@@ -6,126 +6,51 @@
 //
 
 import UIKit
+import SwiftUI
+
+
+struct Product: Identifiable {
+    let id = UUID()
+    let title: String
+    let revenue: Double
+    let colors: [String]
+}
+
 
 final class MonitoringViewController: UIViewController {
-    
-    let baseURL = URL(string: "https://yesno.wtf/api")!
-    let personURL = URL(string: "https://thispersondoesnotexist.com")!
-    var session: URLSession?
-    
-    let yesNoViewModel = YesNoViewModel()
-    let personViewModel = PersonViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        executeAfterTokenCheck {
-            self.personViewModel.request(isRefresh: true)
-            self.yesNoViewModel.request(isRefresh: false)
-            self.yesNoViewModel.request(isRefresh: false)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let products: [Product] = [
+            .init(title: "Annual", revenue: 70, colors: ["a5078f"]),
+            .init(title: "Monthly", revenue: 20, colors: ["8f00e6"]),
+            .init(title: "Lifetime", revenue: 10, colors: ["cddc42"])
+        ]
+        
+        
+        if #available(iOS 18.0, *) {
+            let pieChartView = UIChartView(products: products)
+            let hostingController = UIHostingController(rootView: pieChartView)
+            addChild(hostingController)
+            view.addSubview(hostingController.view)
+            hostingController.view.frame = CGRect(x: view.midX-100, y: view.midY-100, width: 200, height: 200)
+            hostingController.didMove(toParent: self)
+        } else {
+            // Fallback on earlier versions
+            let pieChartView = UIChartViewForLowerVersions(products)
+            pieChartView.frame = CGRect(x: view.midX-100, y: view.midY-100, width: 200, height: 200)
+            view.addSubview(pieChartView)
         }
         
-    }
-    
-    func executeAfterTokenCheck(completion: @escaping () -> ()) {
-        TokenManager.shared.makeTokenRefreshRequestIfNeededAndObserve {
-            completion()
-        }
-    }
-    
-    @objc func tokenDidUpdate() {
-        personViewModel.request(isRefresh: true)
-        yesNoViewModel.request(isRefresh: false)
-        yesNoViewModel.request(isRefresh: false)
-    }
-    
-}
-
-
-class YesNoViewModel {
-    let yesnoURL = URL(string: "https://yesno.wtf/api")!
-    var completion: (() -> ())?
-    func request(isRefresh: Bool) {
-        APIManager.shared.request(url: yesnoURL, isTokenRefresh: isRefresh) {
-            print("yes no is done")
-            self.completion?()
-        }
-    }
-}
-
-class PersonViewModel {
-    let personURL = URL(string: "https://thispersondoesnotexist.com")!
-    var completion: (() -> ())?
-    func request(isRefresh: Bool) {
-        APIManager.shared.request(url: personURL, isTokenRefresh: isRefresh) {
-            print("person is done")
-            self.completion?()
-        }
-    }
-}
-
-class APIManager {
-    static let shared = APIManager()
-    private var serialQueue = OperationQueue()
-    
-    private init() {}
-    func request(url: URL, isTokenRefresh: Bool, completion: @escaping () -> ()) {
         
-        serialQueue.addOperation {
-            let request = URLRequest(url: url)
-            let task = URLSession.shared.dataTask(with: request) { _, _, _ in
-                completion()
-                if isTokenRefresh {
-                    
-                }
-            }
-            task.resume()
-        }
-    }
-}
-var notificationName: NSNotification.Name = .init("token.refresh")
-class TokenManager {
-    static let shared = TokenManager()
-    private init() {}
-    private var isRefreshNeeded: Bool {
-        UserDefaultsBacked<Bool>(key: "token", defaultValue: false).wrappedValue
-    }
-    private var refreshTask: URLSessionDataTask = {
-        let urlRequest = URLRequest(url: URL(string: "https://thispersondoesnotexist.com")!)
-        let task = URLSession.shared.dataTask(with: urlRequest) { _, _, _ in
-            NotificationCenter.default.post(name: notificationName, object: nil)
-        }
-        return task
-    }()
-    
-    func execute(observer: Any, selector: Selector) {
-        if isRefreshNeeded {
-            if refreshTask.state == .running {
-                //add
-                add(observer, selector)
-            }
-            if refreshTask.state == .suspended {
-                refreshTask.resume()
-                //add
-                add(observer, selector)
-            }
-            if refreshTask.state == .completed {
-                refreshTask.resume()
-                //add
-                add(observer, selector)
-            }
-            return
-        }
-        //publish
-        add(observer, selector)
-        NotificationCenter.default.post(name: notificationName, object: nil)
-    }
-    
-    func add(_ observer: Any, _ selector: Selector) {
-        NotificationCenter.default.addObserver(observer,
-                                               selector: selector,
-                                               name: notificationName,
-                                               object: nil)
+        
+        
     }
     
 }
