@@ -16,6 +16,12 @@ struct Product: Identifiable {
     let colors: [String]
 }
 
+struct UIProduct: Identifiable {
+    let id = UUID()
+    let title: String
+    let revenue: NSNumber
+    let colors: [String]
+}
 
 final class MonitoringViewController: UIViewController {
     
@@ -33,6 +39,12 @@ final class MonitoringViewController: UIViewController {
             .init(title: "Lifetime", revenue: 10, colors: ["cddc42"])
         ]
         
+        let uiproducts: [UIProduct] = [
+            .init(title: "Annual", revenue: 70, colors: ["a5078f", "cddc42"]),
+            .init(title: "Monthly", revenue: 20, colors: ["8f00e6", "a5078f"]),
+            .init(title: "Lifetime", revenue: 10, colors: ["cddc42", "a5078f"])
+        ]
+        
         
         if #available(iOS 18.0, *) {
             let pieChartView = UIChartView(products: products)
@@ -43,7 +55,7 @@ final class MonitoringViewController: UIViewController {
             hostingController.didMove(toParent: self)
         } else {
             // Fallback on earlier versions
-            let pieChartView = UIChartViewForLowerVersions(products)
+            let pieChartView = UIChartViewForLowerVersions(uiproducts)
             pieChartView.frame = CGRect(x: view.midX-100, y: view.midY-100, width: 200, height: 200)
             view.addSubview(pieChartView)
         }

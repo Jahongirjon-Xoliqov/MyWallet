@@ -12,6 +12,7 @@
 		0A218BC62BA5CADB004DB41D /* TestActionButtonsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A218BC42BA5CADA004DB41D /* TestActionButtonsViewController.xib */; };
 		0A218BC92BA5CE38004DB41D /* NSAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A218BC82BA5CE38004DB41D /* NSAttributedString+Extension.swift */; };
 		0A218BCB2BA5D02C004DB41D /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A218BCA2BA5D02C004DB41D /* Font.swift */; };
+		0A3875D02BDEA03B0071AEF2 /* UIChartViewForLowerVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3875CF2BDEA03B0071AEF2 /* UIChartViewForLowerVersion.swift */; };
 		0A4304F82BAA2FDC00B4A17C /* RealButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4304F72BAA2FDC00B4A17C /* RealButton.swift */; };
 		0A8527CF2BCFF3BA00C26181 /* UserDefaultsBacked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8527CE2BCFF3BA00C26181 /* UserDefaultsBacked.swift */; };
 		0A8527D12BCFF6B400C26181 /* AnyOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8527D02BCFF6B400C26181 /* AnyOptional.swift */; };
@@ -47,6 +48,7 @@
 		0A218BC42BA5CADA004DB41D /* TestActionButtonsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestActionButtonsViewController.xib; sourceTree = "<group>"; };
 		0A218BC82BA5CE38004DB41D /* NSAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extension.swift"; sourceTree = "<group>"; };
 		0A218BCA2BA5D02C004DB41D /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		0A3875CF2BDEA03B0071AEF2 /* UIChartViewForLowerVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIChartViewForLowerVersion.swift; sourceTree = "<group>"; };
 		0A4304F72BAA2FDC00B4A17C /* RealButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealButton.swift; sourceTree = "<group>"; };
 		0A8527CE2BCFF3BA00C26181 /* UserDefaultsBacked.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsBacked.swift; sourceTree = "<group>"; };
 		0A8527D02BCFF6B400C26181 /* AnyOptional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyOptional.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				0A4304F72BAA2FDC00B4A17C /* RealButton.swift */,
 				0AB66CEC2BCAD4F900090A98 /* AppColor.swift */,
 				0A9CCB1F2BD4F06A00E78C33 /* ChartView.swift */,
+				0A3875CF2BDEA03B0071AEF2 /* UIChartViewForLowerVersion.swift */,
 			);
 			path = MyWallet;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				0A8E015F2B93BA71006086BB /* ViewController.swift in Sources */,
 				0AB66CED2BCAD4F900090A98 /* AppColor.swift in Sources */,
 				0A218BCB2BA5D02C004DB41D /* Font.swift in Sources */,
+				0A3875D02BDEA03B0071AEF2 /* UIChartViewForLowerVersion.swift in Sources */,
 				0A8E01792B93BF25006086BB /* MonitoringViewController.swift in Sources */,
 				0AA56E872BD6576A00EA6167 /* UIColor+Extension.swift in Sources */,
 				0AB66CEB2BCACDEC00090A98 /* UIView+Extensions.swift in Sources */,
