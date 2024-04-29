@@ -15,3 +15,12 @@ public protocol AnyOptional {
 extension Optional: AnyOptional {
     public var isNil: Bool { self == nil }
 }
+
+extension Optional {
+    var nonNil: String {
+        switch self {
+        case .some(let value): return String(describing: value)
+        case .none : return ""
+        }
+    }
+}
