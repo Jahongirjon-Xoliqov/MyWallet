@@ -12,6 +12,9 @@
 		0A218BC62BA5CADB004DB41D /* TestActionButtonsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A218BC42BA5CADA004DB41D /* TestActionButtonsViewController.xib */; };
 		0A218BC92BA5CE38004DB41D /* NSAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A218BC82BA5CE38004DB41D /* NSAttributedString+Extension.swift */; };
 		0A218BCB2BA5D02C004DB41D /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A218BCA2BA5D02C004DB41D /* Font.swift */; };
+		0A2D15BF2BE0F5620087D731 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D15BE2BE0F5620087D731 /* Constants.swift */; };
+		0A2D15C22BE105440087D731 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D15C02BE105440087D731 /* MainViewController.swift */; };
+		0A2D15C32BE105440087D731 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A2D15C12BE105440087D731 /* MainViewController.xib */; };
 		0A3875D02BDEA03B0071AEF2 /* UIChartViewForLowerVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3875CF2BDEA03B0071AEF2 /* UIChartViewForLowerVersion.swift */; };
 		0A4304F82BAA2FDC00B4A17C /* RealButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4304F72BAA2FDC00B4A17C /* RealButton.swift */; };
 		0A8527CF2BCFF3BA00C26181 /* UserDefaultsBacked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8527CE2BCFF3BA00C26181 /* UserDefaultsBacked.swift */; };
@@ -38,6 +41,7 @@
 		0AA16B2F2BDFC06000A1E31F /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA16B2C2BDFC06000A1E31F /* Currency.swift */; };
 		0AA16B302BDFC06000A1E31F /* Currency.swift.gyb in Resources */ = {isa = PBXBuildFile; fileRef = 0AA16B2D2BDFC06000A1E31F /* Currency.swift.gyb */; };
 		0AA16B322BDFC64C00A1E31F /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA16B312BDFC64C00A1E31F /* String+Extensions.swift */; };
+		0AA16B362BDFDBC600A1E31F /* KWNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA16B352BDFDBC600A1E31F /* KWNumberFormatter.swift */; };
 		0AA56E872BD6576A00EA6167 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA56E862BD6576A00EA6167 /* UIColor+Extension.swift */; };
 		0AA56E892BD66C9D00EA6167 /* FloatingPoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA56E882BD66C9D00EA6167 /* FloatingPoint+Extension.swift */; };
 		0AB66CE92BCACDC100090A98 /* CGRect+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB66CE82BCACDC100090A98 /* CGRect+Extensions.swift */; };
@@ -52,6 +56,9 @@
 		0A218BC42BA5CADA004DB41D /* TestActionButtonsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestActionButtonsViewController.xib; sourceTree = "<group>"; };
 		0A218BC82BA5CE38004DB41D /* NSAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extension.swift"; sourceTree = "<group>"; };
 		0A218BCA2BA5D02C004DB41D /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		0A2D15BE2BE0F5620087D731 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0A2D15C02BE105440087D731 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0A2D15C12BE105440087D731 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		0A3875CF2BDEA03B0071AEF2 /* UIChartViewForLowerVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIChartViewForLowerVersion.swift; sourceTree = "<group>"; };
 		0A4304F72BAA2FDC00B4A17C /* RealButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealButton.swift; sourceTree = "<group>"; };
 		0A8527CE2BCFF3BA00C26181 /* UserDefaultsBacked.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsBacked.swift; sourceTree = "<group>"; };
@@ -80,6 +87,7 @@
 		0AA16B2C2BDFC06000A1E31F /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		0AA16B2D2BDFC06000A1E31F /* Currency.swift.gyb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Currency.swift.gyb; sourceTree = "<group>"; };
 		0AA16B312BDFC64C00A1E31F /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		0AA16B352BDFDBC600A1E31F /* KWNumberFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KWNumberFormatter.swift; sourceTree = "<group>"; };
 		0AA56E862BD6576A00EA6167 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		0AA56E882BD66C9D00EA6167 /* FloatingPoint+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FloatingPoint+Extension.swift"; sourceTree = "<group>"; };
 		0AB66CE82BCACDC100090A98 /* CGRect+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Extensions.swift"; sourceTree = "<group>"; };
@@ -161,6 +169,8 @@
 				0A8E01682B93BA72006086BB /* Info.plist */,
 				0A8E01732B93BE80006086BB /* TestViewController.swift */,
 				0A8E01742B93BE80006086BB /* TestViewController.xib */,
+				0A2D15C02BE105440087D731 /* MainViewController.swift */,
+				0A2D15C12BE105440087D731 /* MainViewController.xib */,
 				0A8E01772B93BF25006086BB /* MonitoringViewController.swift */,
 				0AE21E6E2BCEB9FE001462B4 /* MonitoringViewController.xib */,
 				0A8E017B2B93BFB2006086BB /* PieSlice.swift */,
@@ -170,6 +180,7 @@
 				0AB66CEC2BCAD4F900090A98 /* AppColor.swift */,
 				0A9CCB1F2BD4F06A00E78C33 /* UIChartView.swift */,
 				0A3875CF2BDEA03B0071AEF2 /* UIChartViewForLowerVersion.swift */,
+				0A2D15BE2BE0F5620087D731 /* Constants.swift */,
 			);
 			path = MyWallet;
 			sourceTree = "<group>";
@@ -179,6 +190,7 @@
 			children = (
 				0AA16B2D2BDFC06000A1E31F /* Currency.swift.gyb */,
 				0AA16B2C2BDFC06000A1E31F /* Currency.swift */,
+				0AA16B352BDFDBC600A1E31F /* KWNumberFormatter.swift */,
 				0AA16B2B2BDFC06000A1E31F /* Money.swift */,
 			);
 			path = Money;
@@ -245,6 +257,7 @@
 				0AA16B302BDFC06000A1E31F /* Currency.swift.gyb in Resources */,
 				0A8E01672B93BA72006086BB /* LaunchScreen.storyboard in Resources */,
 				0A8E01642B93BA72006086BB /* Assets.xcassets in Resources */,
+				0A2D15C32BE105440087D731 /* MainViewController.xib in Resources */,
 				0AE21E6F2BCEB9FE001462B4 /* MonitoringViewController.xib in Resources */,
 				0A8E01762B93BE80006086BB /* TestViewController.xib in Resources */,
 				0A218BC62BA5CADB004DB41D /* TestActionButtonsViewController.xib in Resources */,
@@ -266,10 +279,12 @@
 				0A8527D52BCFFBE900C26181 /* UIViewControllerExtension.swift in Sources */,
 				0AA16B2F2BDFC06000A1E31F /* Currency.swift in Sources */,
 				0AB66CE92BCACDC100090A98 /* CGRect+Extensions.swift in Sources */,
+				0A2D15BF2BE0F5620087D731 /* Constants.swift in Sources */,
 				0A8E015F2B93BA71006086BB /* ViewController.swift in Sources */,
 				0AB66CED2BCAD4F900090A98 /* AppColor.swift in Sources */,
 				0A218BCB2BA5D02C004DB41D /* Font.swift in Sources */,
 				0AA16B322BDFC64C00A1E31F /* String+Extensions.swift in Sources */,
+				0A2D15C22BE105440087D731 /* MainViewController.swift in Sources */,
 				0A3875D02BDEA03B0071AEF2 /* UIChartViewForLowerVersion.swift in Sources */,
 				0A8E01792B93BF25006086BB /* MonitoringViewController.swift in Sources */,
 				0AA56E872BD6576A00EA6167 /* UIColor+Extension.swift in Sources */,
@@ -278,6 +293,7 @@
 				0A8E015B2B93BA71006086BB /* AppDelegate.swift in Sources */,
 				0A8E017C2B93BFB2006086BB /* PieSlice.swift in Sources */,
 				0A8527D12BCFF6B400C26181 /* AnyOptional.swift in Sources */,
+				0AA16B362BDFDBC600A1E31F /* KWNumberFormatter.swift in Sources */,
 				0A218BC52BA5CADB004DB41D /* TestActionButtonsViewController.swift in Sources */,
 				0A8527D72BCFFC6500C26181 /* UIViewExtension.swift in Sources */,
 				0A8527D32BCFF88500C26181 /* UserDefaultsExtension.swift in Sources */,

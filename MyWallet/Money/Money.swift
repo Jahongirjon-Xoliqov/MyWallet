@@ -395,6 +395,17 @@ extension Money: Codable {
     }
 }
 
+extension Money {
+    func monitoringDisplayableString() -> String {
+        let sign: String = self.amount.isSignMinus ? "-" : "+"
+        guard let amountStr: String = self.amount.applyMoneyFormat() else {
+            return ""
+        }
+        return sign + " " + amountStr + " " + self.currency.code
+    }
+}
+
+
 // MARK: -
 
 fileprivate extension Decimal {

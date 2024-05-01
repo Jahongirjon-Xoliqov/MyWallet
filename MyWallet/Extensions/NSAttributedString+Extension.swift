@@ -14,10 +14,12 @@ extension NSAttributedString {
                      color: UIColor,
                      font: Font,
                      size: CGFloat,
-                     align: NSTextAlignment) {
+                     align: NSTextAlignment,
+                     lineSpacing: CGFloat = 0) {
         
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = align
+        paragraphStyle.lineSpacing = lineSpacing
         let attributes: [NSAttributedString.Key : Any] = [
             .foregroundColor: color,
             .font: font.size(size),
@@ -25,5 +27,11 @@ extension NSAttributedString {
         ]
         self.init(string: text,
                   attributes: attributes)
+    }
+    
+    static func + (lhr: NSAttributedString, rhr: NSAttributedString) -> NSAttributedString {
+        let attrs = NSMutableAttributedString(attributedString: lhr)
+        attrs.append(rhr)
+        return attrs
     }
 }

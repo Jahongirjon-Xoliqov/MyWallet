@@ -91,74 +91,132 @@ final class MonitoringViewController: UIViewController {
         toDatePicker.datePickerMode = .date
         toDatePicker.locale = Locale(identifier: "uz")
         
-        setTotalIncome(with: Money<UZS>.init(33_232_000))
-        setTotalExpense(with: Money<UZS>.init(2_033_000))
+        setTotalIncome(with: Money<UZS>.init(33_232_000).monitoringDisplayableString())
+        setTotalExpense(with: Money<UZS>.init(2_033_000).monitoringDisplayableString())
         
     }
     
     @available(iOS 17.0, *)
     private func drawPieChart(with products : [Product]) {
+        chartView.backgroundColor = .clear
         chartView.addSubSwiftUIView(UIChartView(products: products))
     }
     
     private func drawPieChart(with uiproducts: [UIProduct]) {
+        chartView.backgroundColor = .clear
         chartView.addSubview(UIChartViewForLowerVersions(uiproducts))
     }
     
     
-    private func setTotalExpense(with amount: Money<UZS>) {
-        let amountStr = amount.rounded.amount.applyMoneyFormat().nonNil
-        expenseButton.setAttributedTitle(Attr.init(
-            text: amountStr,
+    private func setTotalExpense(with amount: String) {
+        
+        let hintAttrForNormalState = Attr.init(
+            text: "Expenses:\n",
+            color: .darkText,
+            font: .MONTSERRAT_REGULAR,
+            size: 14,
+            align: .left,
+            lineSpacing: 5
+        )
+        
+        let hintAttrForHightlightedState = Attr.init(
+            text: "Expenses:\n",
+            color: .lightGray,
+            font: .MONTSERRAT_REGULAR,
+            size: 14,
+            align: .left,
+            lineSpacing: 5
+        )
+        
+        let attrForNormalState = Attr.init(
+            text: amount,
             color: .systemRed,
-            font: .MONTSERRAT_REGULAR,
+            font: .MONTSERRAT_BOLD,
             size: 17,
-            align: .left
-        ), for: .normal)
+            align: .left,
+            lineSpacing: 5
+        )
         
-        expenseButton.setAttributedTitle(Attr.init(
-            text: amountStr,
+        let attrForHightlightedState = Attr.init(
+            text: amount,
             color: .lightGray,
-            font: .MONTSERRAT_REGULAR,
+            font: .MONTSERRAT_BOLD,
             size: 17,
-            align: .left
-        ), for: .disabled)
+            align: .left,
+            lineSpacing: 5
+        )
         
-        expenseButton.setAttributedTitle(Attr.init(
-            text: amountStr,
-            color: .lightGray,
-            font: .MONTSERRAT_REGULAR,
-            size: 17,
-            align: .left
-        ), for: .highlighted)
+        if #available(iOS 15.0, *) {} else {
+            expenseButton.titleLabel?.numberOfLines = 0
+        }
+        
+        expenseButton.setAttributedTitle(
+            hintAttrForNormalState + attrForNormalState,
+            for: .normal)
+        
+        expenseButton.setAttributedTitle(
+            hintAttrForHightlightedState + attrForHightlightedState,
+            for: .disabled)
+        
+        expenseButton.setAttributedTitle(
+            hintAttrForHightlightedState + attrForHightlightedState,
+            for: .highlighted)
         
     }
     
-    private func setTotalIncome(with amount: Money<UZS>) {
-        let amountStr = amount.rounded.amount.applyMoneyFormat().nonNil
-        incomeButton.setAttributedTitle(Attr.init(
-            text: amountStr,
+    private func setTotalIncome(with amount: String) {
+        
+        let hintAttrForNormalState = Attr.init(
+            text: "Incomes:\n",
+            color: .darkText,
+            font: .MONTSERRAT_REGULAR,
+            size: 14,
+            align: .left,
+            lineSpacing: 5
+        )
+        
+        let hintAttrForHightlightedState = Attr.init(
+            text: "Incomes:\n",
+            color: .lightGray,
+            font: .MONTSERRAT_REGULAR,
+            size: 14,
+            align: .left,
+            lineSpacing: 5
+        )
+        
+        let attrForNormalState = Attr.init(
+            text: amount,
             color: .systemGreen,
-            font: .MONTSERRAT_REGULAR,
+            font: .MONTSERRAT_BOLD,
             size: 17,
-            align: .left
-        ), for: .normal)
+            align: .left,
+            lineSpacing: 5
+        )
         
-        incomeButton.setAttributedTitle(Attr.init(
-            text: amountStr,
+        let attrForHightlightedState = Attr.init(
+            text: amount,
             color: .lightGray,
-            font: .MONTSERRAT_REGULAR,
+            font: .MONTSERRAT_BOLD,
             size: 17,
-            align: .left
-        ), for: .disabled)
+            align: .left,
+            lineSpacing: 5
+        )
         
-        incomeButton.setAttributedTitle(Attr.init(
-            text: amountStr,
-            color: .lightGray,
-            font: .MONTSERRAT_REGULAR,
-            size: 17,
-            align: .left
-        ), for: .highlighted)
+        if #available(iOS 15.0, *) {} else {
+            incomeButton.titleLabel?.numberOfLines = 0
+        }
+        
+        incomeButton.setAttributedTitle(
+            hintAttrForNormalState + attrForNormalState,
+            for: .normal)
+        
+        incomeButton.setAttributedTitle(
+            hintAttrForHightlightedState + attrForHightlightedState,
+            for: .disabled)
+        
+        incomeButton.setAttributedTitle(
+            hintAttrForHightlightedState + attrForHightlightedState,
+            for: .highlighted)
         
     }
     
