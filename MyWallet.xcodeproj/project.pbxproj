@@ -48,6 +48,12 @@
 		0AB66CEB2BCACDEC00090A98 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB66CEA2BCACDEC00090A98 /* UIView+Extensions.swift */; };
 		0AB66CED2BCAD4F900090A98 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB66CEC2BCAD4F900090A98 /* AppColor.swift */; };
 		0AE21E6F2BCEB9FE001462B4 /* MonitoringViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AE21E6E2BCEB9FE001462B4 /* MonitoringViewController.xib */; };
+		0AE5CA032BE21572001C530A /* SimpleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5CA012BE21572001C530A /* SimpleCollectionViewCell.swift */; };
+		0AE5CA042BE21572001C530A /* SimpleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AE5CA022BE21572001C530A /* SimpleCollectionViewCell.xib */; };
+		0AE5CA0B2BE261C0001C530A /* SavedOperationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5CA092BE261C0001C530A /* SavedOperationCollectionViewCell.swift */; };
+		0AE5CA0C2BE261C0001C530A /* SavedOperationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AE5CA0A2BE261C0001C530A /* SavedOperationCollectionViewCell.xib */; };
+		0AE5CA0F2BE261E4001C530A /* CardsContainerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5CA0D2BE261E4001C530A /* CardsContainerCollectionViewCell.swift */; };
+		0AE5CA102BE261E4001C530A /* CardsContainerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AE5CA0E2BE261E4001C530A /* CardsContainerCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +100,12 @@
 		0AB66CEA2BCACDEC00090A98 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		0AB66CEC2BCAD4F900090A98 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		0AE21E6E2BCEB9FE001462B4 /* MonitoringViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonitoringViewController.xib; sourceTree = "<group>"; };
+		0AE5CA012BE21572001C530A /* SimpleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCollectionViewCell.swift; sourceTree = "<group>"; };
+		0AE5CA022BE21572001C530A /* SimpleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleCollectionViewCell.xib; sourceTree = "<group>"; };
+		0AE5CA092BE261C0001C530A /* SavedOperationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedOperationCollectionViewCell.swift; sourceTree = "<group>"; };
+		0AE5CA0A2BE261C0001C530A /* SavedOperationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavedOperationCollectionViewCell.xib; sourceTree = "<group>"; };
+		0AE5CA0D2BE261E4001C530A /* CardsContainerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsContainerCollectionViewCell.swift; sourceTree = "<group>"; };
+		0AE5CA0E2BE261E4001C530A /* CardsContainerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardsContainerCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +168,7 @@
 		0A8E01592B93BA71006086BB /* MyWallet */ = {
 			isa = PBXGroup;
 			children = (
+				0AE5CA052BE26142001C530A /* Main */,
 				0AA16B2A2BDFC04D00A1E31F /* Money */,
 				0A218BCA2BA5D02C004DB41D /* Font.swift */,
 				0A218BC72BA5CE13004DB41D /* Extensions */,
@@ -169,8 +182,6 @@
 				0A8E01682B93BA72006086BB /* Info.plist */,
 				0A8E01732B93BE80006086BB /* TestViewController.swift */,
 				0A8E01742B93BE80006086BB /* TestViewController.xib */,
-				0A2D15C02BE105440087D731 /* MainViewController.swift */,
-				0A2D15C12BE105440087D731 /* MainViewController.xib */,
 				0A8E01772B93BF25006086BB /* MonitoringViewController.swift */,
 				0AE21E6E2BCEB9FE001462B4 /* MonitoringViewController.xib */,
 				0A8E017B2B93BFB2006086BB /* PieSlice.swift */,
@@ -181,6 +192,8 @@
 				0A9CCB1F2BD4F06A00E78C33 /* UIChartView.swift */,
 				0A3875CF2BDEA03B0071AEF2 /* UIChartViewForLowerVersion.swift */,
 				0A2D15BE2BE0F5620087D731 /* Constants.swift */,
+				0AE5CA012BE21572001C530A /* SimpleCollectionViewCell.swift */,
+				0AE5CA022BE21572001C530A /* SimpleCollectionViewCell.xib */,
 			);
 			path = MyWallet;
 			sourceTree = "<group>";
@@ -194,6 +207,43 @@
 				0AA16B2B2BDFC06000A1E31F /* Money.swift */,
 			);
 			path = Money;
+			sourceTree = "<group>";
+		};
+		0AE5CA052BE26142001C530A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0AE5CA062BE26158001C530A /* Cells */,
+				0A2D15C02BE105440087D731 /* MainViewController.swift */,
+				0A2D15C12BE105440087D731 /* MainViewController.xib */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		0AE5CA062BE26158001C530A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0AE5CA082BE26189001C530A /* SavedOperations */,
+				0AE5CA072BE26171001C530A /* Cards */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		0AE5CA072BE26171001C530A /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				0AE5CA0D2BE261E4001C530A /* CardsContainerCollectionViewCell.swift */,
+				0AE5CA0E2BE261E4001C530A /* CardsContainerCollectionViewCell.xib */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		0AE5CA082BE26189001C530A /* SavedOperations */ = {
+			isa = PBXGroup;
+			children = (
+				0AE5CA092BE261C0001C530A /* SavedOperationCollectionViewCell.swift */,
+				0AE5CA0A2BE261C0001C530A /* SavedOperationCollectionViewCell.xib */,
+			);
+			path = SavedOperations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,12 +306,15 @@
 			files = (
 				0AA16B302BDFC06000A1E31F /* Currency.swift.gyb in Resources */,
 				0A8E01672B93BA72006086BB /* LaunchScreen.storyboard in Resources */,
+				0AE5CA0C2BE261C0001C530A /* SavedOperationCollectionViewCell.xib in Resources */,
 				0A8E01642B93BA72006086BB /* Assets.xcassets in Resources */,
 				0A2D15C32BE105440087D731 /* MainViewController.xib in Resources */,
 				0AE21E6F2BCEB9FE001462B4 /* MonitoringViewController.xib in Resources */,
 				0A8E01762B93BE80006086BB /* TestViewController.xib in Resources */,
 				0A218BC62BA5CADB004DB41D /* TestActionButtonsViewController.xib in Resources */,
 				0A8E01622B93BA71006086BB /* Main.storyboard in Resources */,
+				0AE5CA042BE21572001C530A /* SimpleCollectionViewCell.xib in Resources */,
+				0AE5CA102BE261E4001C530A /* CardsContainerCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,11 +340,14 @@
 				0A2D15C22BE105440087D731 /* MainViewController.swift in Sources */,
 				0A3875D02BDEA03B0071AEF2 /* UIChartViewForLowerVersion.swift in Sources */,
 				0A8E01792B93BF25006086BB /* MonitoringViewController.swift in Sources */,
+				0AE5CA0B2BE261C0001C530A /* SavedOperationCollectionViewCell.swift in Sources */,
+				0AE5CA0F2BE261E4001C530A /* CardsContainerCollectionViewCell.swift in Sources */,
 				0AA56E872BD6576A00EA6167 /* UIColor+Extension.swift in Sources */,
 				0AB66CEB2BCACDEC00090A98 /* UIView+Extensions.swift in Sources */,
 				0A8527DD2BCFFC9400C26181 /* CGPointExtension.swift in Sources */,
 				0A8E015B2B93BA71006086BB /* AppDelegate.swift in Sources */,
 				0A8E017C2B93BFB2006086BB /* PieSlice.swift in Sources */,
+				0AE5CA032BE21572001C530A /* SimpleCollectionViewCell.swift in Sources */,
 				0A8527D12BCFF6B400C26181 /* AnyOptional.swift in Sources */,
 				0AA16B362BDFDBC600A1E31F /* KWNumberFormatter.swift in Sources */,
 				0A218BC52BA5CADB004DB41D /* TestActionButtonsViewController.swift in Sources */,
