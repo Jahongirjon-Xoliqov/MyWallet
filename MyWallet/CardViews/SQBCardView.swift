@@ -89,7 +89,7 @@ struct SQBCardView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct SQBCardView_Previews: PreviewProvider {
     static var previews: some View {
         SQBCardView()
             .previewLayout(.fixed(width: 344, height: 220))

@@ -112,7 +112,7 @@ final class MainViewController: UIViewController {
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .continuousGroupLeadingBoundary
         section.contentInsets = .init(top: 20, leading: 20, bottom: 0, trailing: 20)
-        section.interGroupSpacing = 20
+        section.interGroupSpacing = 10
         return section
     }
     
