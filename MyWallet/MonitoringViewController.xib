@@ -78,7 +78,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <datePicker contentMode="scaleToFill" horizontalHuggingPriority="252" horizontalCompressionResistancePriority="752" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" toolTip="ewerwer" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="EMD-hU-c1m">
+                        <datePicker toolTip="ewerwer" contentMode="scaleToFill" horizontalHuggingPriority="252" horizontalCompressionResistancePriority="752" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="EMD-hU-c1m">
                             <rect key="frame" x="200" y="0.0" width="150" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="G8n-XB-9Td"/>

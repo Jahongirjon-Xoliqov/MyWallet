@@ -54,6 +54,7 @@
 		0AE5CA0C2BE261C0001C530A /* SavedOperationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AE5CA0A2BE261C0001C530A /* SavedOperationCollectionViewCell.xib */; };
 		0AE5CA0F2BE261E4001C530A /* CardsContainerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5CA0D2BE261E4001C530A /* CardsContainerCollectionViewCell.swift */; };
 		0AE5CA102BE261E4001C530A /* CardsContainerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AE5CA0E2BE261E4001C530A /* CardsContainerCollectionViewCell.xib */; };
+		0AE5CA152BE4BD4F001C530A /* SQBCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5CA142BE4BD4F001C530A /* SQBCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +107,7 @@
 		0AE5CA0A2BE261C0001C530A /* SavedOperationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavedOperationCollectionViewCell.xib; sourceTree = "<group>"; };
 		0AE5CA0D2BE261E4001C530A /* CardsContainerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsContainerCollectionViewCell.swift; sourceTree = "<group>"; };
 		0AE5CA0E2BE261E4001C530A /* CardsContainerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardsContainerCollectionViewCell.xib; sourceTree = "<group>"; };
+		0AE5CA142BE4BD4F001C530A /* SQBCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQBCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 		0A8E01592B93BA71006086BB /* MyWallet */ = {
 			isa = PBXGroup;
 			children = (
+				0AE5CA112BE4BCBF001C530A /* CardViews */,
 				0AE5CA052BE26142001C530A /* Main */,
 				0AA16B2A2BDFC04D00A1E31F /* Money */,
 				0A218BCA2BA5D02C004DB41D /* Font.swift */,
@@ -244,6 +247,14 @@
 				0AE5CA0A2BE261C0001C530A /* SavedOperationCollectionViewCell.xib */,
 			);
 			path = SavedOperations;
+			sourceTree = "<group>";
+		};
+		0AE5CA112BE4BCBF001C530A /* CardViews */ = {
+			isa = PBXGroup;
+			children = (
+				0AE5CA142BE4BD4F001C530A /* SQBCardView.swift */,
+			);
+			path = CardViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,6 +344,7 @@
 				0AA16B2F2BDFC06000A1E31F /* Currency.swift in Sources */,
 				0AB66CE92BCACDC100090A98 /* CGRect+Extensions.swift in Sources */,
 				0A2D15BF2BE0F5620087D731 /* Constants.swift in Sources */,
+				0AE5CA152BE4BD4F001C530A /* SQBCardView.swift in Sources */,
 				0A8E015F2B93BA71006086BB /* ViewController.swift in Sources */,
 				0AB66CED2BCAD4F900090A98 /* AppColor.swift in Sources */,
 				0A218BCB2BA5D02C004DB41D /* Font.swift in Sources */,
