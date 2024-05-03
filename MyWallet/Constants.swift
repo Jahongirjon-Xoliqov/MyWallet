@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+var standartCardSizeRatio: CGFloat {
+    86.0 / 54.0
+}

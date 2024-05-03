@@ -12,6 +12,7 @@ final class CardsContainerCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        contentView.backgroundColor = .blue
     }
 
 }
