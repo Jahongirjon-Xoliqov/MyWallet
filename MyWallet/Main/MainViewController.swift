@@ -12,6 +12,7 @@ final class MainViewController: UIViewController {
     enum MainViewControllerSection: Int, CaseIterable {
         case cards = 0
         case savedOperations = 1
+        case exchangeRates = 2
     }
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -50,6 +51,15 @@ final class MainViewController: UIViewController {
             UINib(nibName: "SavedOperationCollectionViewCell", bundle: nil),
             forCellWithReuseIdentifier: "SavedOperationCollectionViewCell"
         )
+        collectionView.register(
+            UINib(nibName: "SavedOperationCollectionViewCell", bundle: nil),
+            forCellWithReuseIdentifier: "SavedOperationCollectionViewCell"
+        )
+        collectionView.register(
+            UINib(nibName: "ExchangeRatesWidgetCell", bundle: nil),
+            forCellWithReuseIdentifier: "ExchangeRatesWidgetCell"
+        )
+        
         collectionView.collectionViewLayout = createLayout()
     }
     
@@ -61,6 +71,9 @@ final class MainViewController: UIViewController {
             }
             if sectionIndex == 1 {
                 return self.getSavedOperationsSectionLayout()
+            }
+            if sectionIndex == 2 {
+                return self.getExchangeRatesSectionLayout()
             }
             return nil
         }
@@ -116,12 +129,35 @@ final class MainViewController: UIViewController {
         return section
     }
     
+    func getExchangeRatesSectionLayout() -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .fractionalHeight(1.0)
+        )
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .absolute(70)
+        )
+        let group = NSCollectionLayoutGroup.horizontal(
+            layoutSize: groupSize,
+            subitems: [item]
+        )
+        
+        let section = NSCollectionLayoutSection(group: group)
+        //section.orthogonalScrollingBehavior = .continuousGroupLeadingBoundary
+        section.contentInsets = .init(top: 20, leading: 20, bottom: 0, trailing: 20)
+        section.interGroupSpacing = 10
+        return section
+    }
+    
 }
 
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        2
+        3
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -130,6 +166,9 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         }
         if section == 1 {
             return 10
+        }
+        if section == 2 {
+            return 3
         }
         fatalError()
     }
@@ -145,6 +184,13 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         if indexPath.section == 1 {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SavedOperationCollectionViewCell", for: indexPath) as? SavedOperationCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            return cell
+        }
+        
+        if indexPath.section == 2 {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ExchangeRatesWidgetCell", for: indexPath) as? ExchangeRatesWidgetCell else {
                 return UICollectionViewCell()
             }
             return cell

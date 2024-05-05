@@ -17,6 +17,9 @@
 		0A2D15C32BE105440087D731 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A2D15C12BE105440087D731 /* MainViewController.xib */; };
 		0A3875D02BDEA03B0071AEF2 /* UIChartViewForLowerVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3875CF2BDEA03B0071AEF2 /* UIChartViewForLowerVersion.swift */; };
 		0A4304F82BAA2FDC00B4A17C /* RealButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4304F72BAA2FDC00B4A17C /* RealButton.swift */; };
+		0A4BC1B02BE7472600756428 /* ExchangeRatesWidgetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4BC1AE2BE7472600756428 /* ExchangeRatesWidgetCell.swift */; };
+		0A4BC1B12BE7472600756428 /* ExchangeRatesWidgetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A4BC1AF2BE7472600756428 /* ExchangeRatesWidgetCell.xib */; };
+		0A4BC1B42BE7477500756428 /* ExchangeRatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4BC1B32BE7477500756428 /* ExchangeRatesView.swift */; };
 		0A8527CF2BCFF3BA00C26181 /* UserDefaultsBacked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8527CE2BCFF3BA00C26181 /* UserDefaultsBacked.swift */; };
 		0A8527D12BCFF6B400C26181 /* AnyOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8527D02BCFF6B400C26181 /* AnyOptional.swift */; };
 		0A8527D32BCFF88500C26181 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8527D22BCFF88500C26181 /* UserDefaultsExtension.swift */; };
@@ -69,6 +72,9 @@
 		0A2D15C12BE105440087D731 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		0A3875CF2BDEA03B0071AEF2 /* UIChartViewForLowerVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIChartViewForLowerVersion.swift; sourceTree = "<group>"; };
 		0A4304F72BAA2FDC00B4A17C /* RealButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealButton.swift; sourceTree = "<group>"; };
+		0A4BC1AE2BE7472600756428 /* ExchangeRatesWidgetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesWidgetCell.swift; sourceTree = "<group>"; };
+		0A4BC1AF2BE7472600756428 /* ExchangeRatesWidgetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExchangeRatesWidgetCell.xib; sourceTree = "<group>"; };
+		0A4BC1B32BE7477500756428 /* ExchangeRatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesView.swift; sourceTree = "<group>"; };
 		0A8527CE2BCFF3BA00C26181 /* UserDefaultsBacked.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsBacked.swift; sourceTree = "<group>"; };
 		0A8527D02BCFF6B400C26181 /* AnyOptional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyOptional.swift; sourceTree = "<group>"; };
 		0A8527D22BCFF88500C26181 /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
@@ -153,6 +159,24 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		0A4BC1AD2BE746A500756428 /* ExchangeRates */ = {
+			isa = PBXGroup;
+			children = (
+				0A4BC1B22BE7474B00756428 /* Views */,
+				0A4BC1AE2BE7472600756428 /* ExchangeRatesWidgetCell.swift */,
+				0A4BC1AF2BE7472600756428 /* ExchangeRatesWidgetCell.xib */,
+			);
+			path = ExchangeRates;
+			sourceTree = "<group>";
+		};
+		0A4BC1B22BE7474B00756428 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0A4BC1B32BE7477500756428 /* ExchangeRatesView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		0A8E014E2B93BA71006086BB = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +259,7 @@
 		0AE5CA062BE26158001C530A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				0A4BC1AD2BE746A500756428 /* ExchangeRates */,
 				0AE5CA082BE26189001C530A /* SavedOperations */,
 				0AE5CA072BE26171001C530A /* Cards */,
 			);
@@ -336,6 +361,7 @@
 				0A218BC62BA5CADB004DB41D /* TestActionButtonsViewController.xib in Resources */,
 				0A8E01622B93BA71006086BB /* Main.storyboard in Resources */,
 				0AE5CA042BE21572001C530A /* SimpleCollectionViewCell.xib in Resources */,
+				0A4BC1B12BE7472600756428 /* ExchangeRatesWidgetCell.xib in Resources */,
 				0AE5CA102BE261E4001C530A /* CardsContainerCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,6 +396,7 @@
 				0AB66CEB2BCACDEC00090A98 /* UIView+Extensions.swift in Sources */,
 				0A8527DD2BCFFC9400C26181 /* CGPointExtension.swift in Sources */,
 				0A8E015B2B93BA71006086BB /* AppDelegate.swift in Sources */,
+				0A4BC1B42BE7477500756428 /* ExchangeRatesView.swift in Sources */,
 				0A8E017C2B93BFB2006086BB /* PieSlice.swift in Sources */,
 				0AE5CA032BE21572001C530A /* SimpleCollectionViewCell.swift in Sources */,
 				0A8527D12BCFF6B400C26181 /* AnyOptional.swift in Sources */,
@@ -380,6 +407,7 @@
 				0A8E01752B93BE80006086BB /* TestViewController.swift in Sources */,
 				0A8527DF2BD051F600C26181 /* NSLocking+Sugar.swift in Sources */,
 				0AA56E892BD66C9D00EA6167 /* FloatingPoint+Extension.swift in Sources */,
+				0A4BC1B02BE7472600756428 /* ExchangeRatesWidgetCell.swift in Sources */,
 				0A4304F82BAA2FDC00B4A17C /* RealButton.swift in Sources */,
 				0A8527DB2BCFFC9400C26181 /* CGRectExtensions.swift in Sources */,
 				0A8E015D2B93BA71006086BB /* SceneDelegate.swift in Sources */,
