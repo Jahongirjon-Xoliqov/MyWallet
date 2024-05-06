@@ -51,6 +51,9 @@
 		0AB66CEB2BCACDEC00090A98 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB66CEA2BCACDEC00090A98 /* UIView+Extensions.swift */; };
 		0AB66CED2BCAD4F900090A98 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB66CEC2BCAD4F900090A98 /* AppColor.swift */; };
 		0ADFE8522BE5629700A57841 /* SavedOperationWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADFE8512BE5629700A57841 /* SavedOperationWidgetView.swift */; };
+		0AE082682BE7E26700B0013F /* QuickPayWidgetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE082662BE7E26700B0013F /* QuickPayWidgetCell.swift */; };
+		0AE082692BE7E26700B0013F /* QuickPayWidgetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AE082672BE7E26700B0013F /* QuickPayWidgetCell.xib */; };
+		0AE0826C2BE7E29A00B0013F /* QuickPayWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0826B2BE7E29A00B0013F /* QuickPayWidgetView.swift */; };
 		0AE21E6F2BCEB9FE001462B4 /* MonitoringViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AE21E6E2BCEB9FE001462B4 /* MonitoringViewController.xib */; };
 		0AE5CA032BE21572001C530A /* SimpleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5CA012BE21572001C530A /* SimpleCollectionViewCell.swift */; };
 		0AE5CA042BE21572001C530A /* SimpleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AE5CA022BE21572001C530A /* SimpleCollectionViewCell.xib */; };
@@ -108,6 +111,9 @@
 		0AB66CEA2BCACDEC00090A98 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		0AB66CEC2BCAD4F900090A98 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		0ADFE8512BE5629700A57841 /* SavedOperationWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedOperationWidgetView.swift; sourceTree = "<group>"; };
+		0AE082662BE7E26700B0013F /* QuickPayWidgetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickPayWidgetCell.swift; sourceTree = "<group>"; };
+		0AE082672BE7E26700B0013F /* QuickPayWidgetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuickPayWidgetCell.xib; sourceTree = "<group>"; };
+		0AE0826B2BE7E29A00B0013F /* QuickPayWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickPayWidgetView.swift; sourceTree = "<group>"; };
 		0AE21E6E2BCEB9FE001462B4 /* MonitoringViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonitoringViewController.xib; sourceTree = "<group>"; };
 		0AE5CA012BE21572001C530A /* SimpleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCollectionViewCell.swift; sourceTree = "<group>"; };
 		0AE5CA022BE21572001C530A /* SimpleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -246,6 +252,24 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		0AE082652BE7E21600B0013F /* QuickPay */ = {
+			isa = PBXGroup;
+			children = (
+				0AE0826A2BE7E28100B0013F /* Views */,
+				0AE082662BE7E26700B0013F /* QuickPayWidgetCell.swift */,
+				0AE082672BE7E26700B0013F /* QuickPayWidgetCell.xib */,
+			);
+			path = QuickPay;
+			sourceTree = "<group>";
+		};
+		0AE0826A2BE7E28100B0013F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0AE0826B2BE7E29A00B0013F /* QuickPayWidgetView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		0AE5CA052BE26142001C530A /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +283,7 @@
 		0AE5CA062BE26158001C530A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				0AE082652BE7E21600B0013F /* QuickPay */,
 				0A4BC1AD2BE746A500756428 /* ExchangeRates */,
 				0AE5CA082BE26189001C530A /* SavedOperations */,
 				0AE5CA072BE26171001C530A /* Cards */,
@@ -362,6 +387,7 @@
 				0A8E01622B93BA71006086BB /* Main.storyboard in Resources */,
 				0AE5CA042BE21572001C530A /* SimpleCollectionViewCell.xib in Resources */,
 				0A4BC1B12BE7472600756428 /* ExchangeRatesWidgetCell.xib in Resources */,
+				0AE082692BE7E26700B0013F /* QuickPayWidgetCell.xib in Resources */,
 				0AE5CA102BE261E4001C530A /* CardsContainerCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,6 +410,7 @@
 				0AE5CA152BE4BD4F001C530A /* SQBCardView.swift in Sources */,
 				0A8E015F2B93BA71006086BB /* ViewController.swift in Sources */,
 				0AB66CED2BCAD4F900090A98 /* AppColor.swift in Sources */,
+				0AE082682BE7E26700B0013F /* QuickPayWidgetCell.swift in Sources */,
 				0A218BCB2BA5D02C004DB41D /* Font.swift in Sources */,
 				0AA16B322BDFC64C00A1E31F /* String+Extensions.swift in Sources */,
 				0A2D15C22BE105440087D731 /* MainViewController.swift in Sources */,
@@ -411,6 +438,7 @@
 				0A4304F82BAA2FDC00B4A17C /* RealButton.swift in Sources */,
 				0A8527DB2BCFFC9400C26181 /* CGRectExtensions.swift in Sources */,
 				0A8E015D2B93BA71006086BB /* SceneDelegate.swift in Sources */,
+				0AE0826C2BE7E29A00B0013F /* QuickPayWidgetView.swift in Sources */,
 				0A218BC12BA5AB14004DB41D /* ActionButton.swift in Sources */,
 				0A9CCB202BD4F06A00E78C33 /* UIChartView.swift in Sources */,
 			);

@@ -10,9 +10,8 @@ import SwiftUI
 struct ExchangeRatesView: View {
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: 12)
                 .fill(.gray.opacity(0.1))
-            
             HStack {
                 VStack {
                     HStack {
@@ -53,11 +52,7 @@ struct ExchangeRatesView: View {
                             }
                             .padding(.init(top: 3, leading: 3, bottom: 3, trailing: 3))
                         }
-                        
                     }
-                    
-                    
-                    
                 }
                 Spacer()
                 Image("cardBackground")
@@ -66,7 +61,6 @@ struct ExchangeRatesView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 8))
             }
             .padding(.init(top: 8, leading: 8, bottom: 8, trailing: 8))
-            
         }
         
     }

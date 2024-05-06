@@ -13,6 +13,7 @@ final class MainViewController: UIViewController {
         case cards = 0
         case savedOperations = 1
         case exchangeRates = 2
+        case quickPay = 3
     }
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -59,7 +60,10 @@ final class MainViewController: UIViewController {
             UINib(nibName: "ExchangeRatesWidgetCell", bundle: nil),
             forCellWithReuseIdentifier: "ExchangeRatesWidgetCell"
         )
-        
+        collectionView.register(
+            UINib(nibName: "QuickPayWidgetCell", bundle: nil),
+            forCellWithReuseIdentifier: "QuickPayWidgetCell"
+        )
         collectionView.collectionViewLayout = createLayout()
     }
     
@@ -74,6 +78,9 @@ final class MainViewController: UIViewController {
             }
             if sectionIndex == 2 {
                 return self.getExchangeRatesSectionLayout()
+            }
+            if sectionIndex == 3 {
+                return self.getQuickPaySectionLayout()
             }
             return nil
         }
@@ -138,7 +145,30 @@ final class MainViewController: UIViewController {
         
         let groupSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
-            heightDimension: .absolute(70)
+            heightDimension: .absolute(80)
+        )
+        let group = NSCollectionLayoutGroup.horizontal(
+            layoutSize: groupSize,
+            subitems: [item]
+        )
+        
+        let section = NSCollectionLayoutSection(group: group)
+        //section.orthogonalScrollingBehavior = .continuousGroupLeadingBoundary
+        section.contentInsets = .init(top: 20, leading: 20, bottom: 0, trailing: 20)
+        section.interGroupSpacing = 10
+        return section
+    }
+    
+    func getQuickPaySectionLayout() -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .fractionalHeight(0.75)
+        )
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .fractionalWidth(1.0)
         )
         let group = NSCollectionLayoutGroup.horizontal(
             layoutSize: groupSize,
@@ -157,7 +187,7 @@ final class MainViewController: UIViewController {
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        3
+        4
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -168,7 +198,10 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return 10
         }
         if section == 2 {
-            return 3
+            return 1
+        }
+        if section == 3 {
+            return 1
         }
         fatalError()
     }
@@ -196,9 +229,15 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return cell
         }
         
+        if indexPath.section == 3 {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QuickPayWidgetCell", for: indexPath) as? QuickPayWidgetCell else {
+                return UICollectionViewCell()
+            }
+            return cell
+        }
+        
         fatalError()
         
     }
-    
     
 }
