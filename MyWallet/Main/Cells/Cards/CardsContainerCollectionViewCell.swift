@@ -12,7 +12,16 @@ final class CardsContainerCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        contentView.addSubSwiftUIView(SQBCardView())
+        let bankCardModel = UZBBankCardViewModel(
+            number: "9860 0903 9345 0022",
+            expirationDate: "08/26",
+            cardholderName: "JAHONGIRJON KHOLIKOV",
+            brandImageUrl: "bankCardLogoSQB",
+            typeImageUrl: "cardTypeLogoHumo",
+            coverImageUrl: "cardBackground"
+        )
+        addSUIView(SQBCardView(model: bankCardModel))
     }
 
 }
+

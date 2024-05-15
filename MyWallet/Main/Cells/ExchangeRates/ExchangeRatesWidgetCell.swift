@@ -12,7 +12,7 @@ final class ExchangeRatesWidgetCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        contentView.addSubSwiftUIView(ExchangeRatesView())
+        addSUIView(ExchangeRatesView())
     }
 
 }

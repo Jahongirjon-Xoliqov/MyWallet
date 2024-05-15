@@ -16,6 +16,18 @@ final class MainViewController: UIViewController {
         case quickPay = 3
     }
     
+    let contextMenuItems = [
+        ContextMenuItem(title: "Edit", image: UIImage.add, index: 0),
+        ContextMenuItem(title: "Remove", image: UIImage.add, index: 1),
+        ContextMenuItem(title: "Promote", image: UIImage.add, index: 2)
+    ]
+    
+    struct ContextMenuItem {
+      var title = ""
+      var image = UIImage()
+      var index = 0
+    }
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     var dataSource: UICollectionViewDiffableDataSource<MainViewControllerSection, Int>! = nil
@@ -67,7 +79,6 @@ final class MainViewController: UIViewController {
         collectionView.collectionViewLayout = createLayout()
     }
     
-    /// - Tag: PerSection
     func createLayout() -> UICollectionViewLayout {
         let layout = UICollectionViewCompositionalLayout { (sectionIndex, layoutEnvironment) -> NSCollectionLayoutSection? in
             if sectionIndex == 0 {
@@ -238,6 +249,26 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         fatalError()
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        return UIContextMenuConfiguration(identifier: nil, previewProvider: nil, actionProvider: { suggestedActions in
+            return self.makeContextMenu(for: indexPath.row)
+        })
+    }
+    
+    func makeContextMenu(for index:Int) -> UIMenu {
+        var actions = [UIAction]()
+        for item in self.contextMenuItems {
+            let action = UIAction(title: item.title, image: item.image, identifier: nil, discoverabilityTitle: nil) { _ in
+                //self.didSelectContextMenu(menuIndex: item.index, cellIndex: index)  // Here I have both cell index & context menu item index
+                print("did select at \(index)")
+            }
+            actions.append(action)
+        }
+        let cancel = UIAction(title: "Cancel", attributes: .destructive) { _ in}
+        actions.append(cancel)
+        return UIMenu(title: "", children: actions)
     }
     
 }

@@ -12,7 +12,9 @@ final class QuickPayWidgetCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        contentView.addSubSwiftUIView(QuickPayWidgetView())
+        addSUIView(QuickPayWidgetView())
+        
     }
 
 }
+

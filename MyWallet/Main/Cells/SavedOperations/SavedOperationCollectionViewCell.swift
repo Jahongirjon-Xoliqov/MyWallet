@@ -11,8 +11,7 @@ final class SavedOperationCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        contentView.addSubSwiftUIView(SavedOperationWidgetView())
+        addSUIView(SavedOperationWidgetView())
     }
 
 }

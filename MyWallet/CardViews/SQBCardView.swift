@@ -8,16 +8,17 @@
 import SwiftUI
 
 struct SQBCardView: View {
+    var model: UZBBankCardModelProtocol
     var body: some View {
         ZStack {
-            Image("cardBackground")
+            Image(model.coverImageUrl)
                 .renderingMode(.original)
                 .resizable()
             VStack(alignment: .trailing) {
                 Spacer()
                 HStack(alignment: .bottom) {
                     Spacer()
-                    Image("cardTypeLogoHumo")
+                    Image(model.typeImageUrl)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 50, height: 30)
@@ -33,7 +34,7 @@ struct SQBCardView: View {
             HStack(alignment: .center) {
                 VStack(alignment: .leading) {
                     HStack {
-                        Image("bankCardLogoSQB")
+                        Image(model.brandImageUrl)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 100)
@@ -58,7 +59,7 @@ struct SQBCardView: View {
                     Button(action: {
                         
                     }, label: {
-                        Text("9860 0201 1202 8332")
+                        Text(model.number)
                             .foregroundColor(.white)
                             .font(.system(size: 25))
                     })
@@ -68,14 +69,14 @@ struct SQBCardView: View {
                         Button(action: {
                             
                         }, label: {
-                            Text("08/26")
+                            Text(model.expirationDate)
                                 .foregroundColor(.white)
                                 .font(.system(size: 15))
                         })
                         Spacer()
                     }
                     Spacer(minLength: 3)
-                    Text("JAHONGIRJON KHOLIKOV")
+                    Text(model.cardholderName)
                         .foregroundColor(.white)
                         .font(.system(size: 17))
                 }
@@ -91,7 +92,15 @@ struct SQBCardView: View {
 
 struct SQBCardView_Previews: PreviewProvider {
     static var previews: some View {
-        SQBCardView()
+        let bankCardModel = UZBBankCardViewModel(
+            number: "9860 0903 9345 0022",
+            expirationDate: "08/26",
+            cardholderName: "JAHONGIRJON KHOLIKOV",
+            brandImageUrl: "bankCardLogoSQB",
+            typeImageUrl: "cardTypeLogoHumo",
+            coverImageUrl: "cardBackground"
+        )
+        SQBCardView(model: bankCardModel)
             .previewLayout(.fixed(width: 344, height: 220))
     }
 }

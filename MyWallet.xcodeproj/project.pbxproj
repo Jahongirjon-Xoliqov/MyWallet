@@ -20,6 +20,7 @@
 		0A4BC1B02BE7472600756428 /* ExchangeRatesWidgetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4BC1AE2BE7472600756428 /* ExchangeRatesWidgetCell.swift */; };
 		0A4BC1B12BE7472600756428 /* ExchangeRatesWidgetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A4BC1AF2BE7472600756428 /* ExchangeRatesWidgetCell.xib */; };
 		0A4BC1B42BE7477500756428 /* ExchangeRatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4BC1B32BE7477500756428 /* ExchangeRatesView.swift */; };
+		0A6DAC4B2BEF449B0053C765 /* UICollectionViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6DAC4A2BEF449B0053C765 /* UICollectionViewCell+Extensions.swift */; };
 		0A8527CF2BCFF3BA00C26181 /* UserDefaultsBacked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8527CE2BCFF3BA00C26181 /* UserDefaultsBacked.swift */; };
 		0A8527D12BCFF6B400C26181 /* AnyOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8527D02BCFF6B400C26181 /* AnyOptional.swift */; };
 		0A8527D32BCFF88500C26181 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8527D22BCFF88500C26181 /* UserDefaultsExtension.swift */; };
@@ -29,6 +30,8 @@
 		0A8527DC2BCFFC9400C26181 /* CGSizeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8527D92BCFFC9400C26181 /* CGSizeExtension.swift */; };
 		0A8527DD2BCFFC9400C26181 /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8527DA2BCFFC9400C26181 /* CGPointExtension.swift */; };
 		0A8527DF2BD051F600C26181 /* NSLocking+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8527DE2BD051F600C26181 /* NSLocking+Sugar.swift */; };
+		0A8C3AE92BF33E030055DEDE /* UZBBankCardModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C3AE82BF33E030055DEDE /* UZBBankCardModelProtocol.swift */; };
+		0A8C3AEB2BF340570055DEDE /* UZBBankCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C3AEA2BF340570055DEDE /* UZBBankCardViewModel.swift */; };
 		0A8E015B2B93BA71006086BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E015A2B93BA71006086BB /* AppDelegate.swift */; };
 		0A8E015D2B93BA71006086BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E015C2B93BA71006086BB /* SceneDelegate.swift */; };
 		0A8E015F2B93BA71006086BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E015E2B93BA71006086BB /* ViewController.swift */; };
@@ -78,6 +81,7 @@
 		0A4BC1AE2BE7472600756428 /* ExchangeRatesWidgetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesWidgetCell.swift; sourceTree = "<group>"; };
 		0A4BC1AF2BE7472600756428 /* ExchangeRatesWidgetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExchangeRatesWidgetCell.xib; sourceTree = "<group>"; };
 		0A4BC1B32BE7477500756428 /* ExchangeRatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesView.swift; sourceTree = "<group>"; };
+		0A6DAC4A2BEF449B0053C765 /* UICollectionViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extensions.swift"; sourceTree = "<group>"; };
 		0A8527CE2BCFF3BA00C26181 /* UserDefaultsBacked.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsBacked.swift; sourceTree = "<group>"; };
 		0A8527D02BCFF6B400C26181 /* AnyOptional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyOptional.swift; sourceTree = "<group>"; };
 		0A8527D22BCFF88500C26181 /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 		0A8527D92BCFFC9400C26181 /* CGSizeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSizeExtension.swift; sourceTree = "<group>"; };
 		0A8527DA2BCFFC9400C26181 /* CGPointExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointExtension.swift; sourceTree = "<group>"; };
 		0A8527DE2BD051F600C26181 /* NSLocking+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLocking+Sugar.swift"; sourceTree = "<group>"; };
+		0A8C3AE82BF33E030055DEDE /* UZBBankCardModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UZBBankCardModelProtocol.swift; sourceTree = "<group>"; };
+		0A8C3AEA2BF340570055DEDE /* UZBBankCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UZBBankCardViewModel.swift; sourceTree = "<group>"; };
 		0A8E01572B93BA71006086BB /* MyWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A8E015A2B93BA71006086BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A8E015C2B93BA71006086BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +167,7 @@
 				0AA56E862BD6576A00EA6167 /* UIColor+Extension.swift */,
 				0AA56E882BD66C9D00EA6167 /* FloatingPoint+Extension.swift */,
 				0AA16B312BDFC64C00A1E31F /* String+Extensions.swift */,
+				0A6DAC4A2BEF449B0053C765 /* UICollectionViewCell+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -202,6 +209,8 @@
 		0A8E01592B93BA71006086BB /* MyWallet */ = {
 			isa = PBXGroup;
 			children = (
+				0A8C3AEA2BF340570055DEDE /* UZBBankCardViewModel.swift */,
+				0A8C3AE82BF33E030055DEDE /* UZBBankCardModelProtocol.swift */,
 				0AE5CA112BE4BCBF001C530A /* CardViews */,
 				0AE5CA052BE26142001C530A /* Main */,
 				0AA16B2A2BDFC04D00A1E31F /* Money */,
@@ -414,6 +423,7 @@
 				0A218BCB2BA5D02C004DB41D /* Font.swift in Sources */,
 				0AA16B322BDFC64C00A1E31F /* String+Extensions.swift in Sources */,
 				0A2D15C22BE105440087D731 /* MainViewController.swift in Sources */,
+				0A8C3AE92BF33E030055DEDE /* UZBBankCardModelProtocol.swift in Sources */,
 				0A3875D02BDEA03B0071AEF2 /* UIChartViewForLowerVersion.swift in Sources */,
 				0A8E01792B93BF25006086BB /* MonitoringViewController.swift in Sources */,
 				0AE5CA0B2BE261C0001C530A /* SavedOperationCollectionViewCell.swift in Sources */,
@@ -421,6 +431,7 @@
 				0ADFE8522BE5629700A57841 /* SavedOperationWidgetView.swift in Sources */,
 				0AA56E872BD6576A00EA6167 /* UIColor+Extension.swift in Sources */,
 				0AB66CEB2BCACDEC00090A98 /* UIView+Extensions.swift in Sources */,
+				0A6DAC4B2BEF449B0053C765 /* UICollectionViewCell+Extensions.swift in Sources */,
 				0A8527DD2BCFFC9400C26181 /* CGPointExtension.swift in Sources */,
 				0A8E015B2B93BA71006086BB /* AppDelegate.swift in Sources */,
 				0A4BC1B42BE7477500756428 /* ExchangeRatesView.swift in Sources */,
@@ -435,6 +446,7 @@
 				0A8527DF2BD051F600C26181 /* NSLocking+Sugar.swift in Sources */,
 				0AA56E892BD66C9D00EA6167 /* FloatingPoint+Extension.swift in Sources */,
 				0A4BC1B02BE7472600756428 /* ExchangeRatesWidgetCell.swift in Sources */,
+				0A8C3AEB2BF340570055DEDE /* UZBBankCardViewModel.swift in Sources */,
 				0A4304F82BAA2FDC00B4A17C /* RealButton.swift in Sources */,
 				0A8527DB2BCFFC9400C26181 /* CGRectExtensions.swift in Sources */,
 				0A8E015D2B93BA71006086BB /* SceneDelegate.swift in Sources */,
