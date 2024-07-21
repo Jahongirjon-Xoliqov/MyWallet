@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TBAViewController" customModule="MyWallet" customModuleProvider="target">
+            <connections>
+                <outlet property="textField" destination="rsg-YO-6C8" id="p1e-GW-a3i"/>
+                <outlet property="transferLimitsLabel" destination="CgI-au-vzX" id="5uU-kA-jZS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rsg-YO-6C8">
+                    <rect key="frame" x="20" y="240" width="353" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNW-wa-bGN">
+                    <rect key="frame" x="133" y="109" width="127.33333333333331" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="38i-ty-PzN"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Sending Card"/>
+                    <connections>
+                        <action selector="didSelectSendingCard:" destination="-1" eventType="touchUpInside" id="zPI-cv-eiZ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5GI-KF-OQU">
+                    <rect key="frame" x="129.33333333333331" y="165" width="134.33333333333331" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="Yqn-zm-BPa"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="ReceivingCard"/>
+                    <connections>
+                        <action selector="didSelectReceivingCard:" destination="-1" eventType="touchUpInside" id="SFo-nV-ZZv"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CgI-au-vzX">
+                    <rect key="frame" x="20" y="314" width="353" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yaI-6q-nWA">
+                    <rect key="frame" x="159" y="66" width="75" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="lw7-hc-mgK"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <connections>
+                        <action selector="didReceiveTranferInfo:" destination="-1" eventType="touchUpInside" id="Iwj-Wq-ksM"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CgI-au-vzX" secondAttribute="trailing" constant="20" id="6dk-2q-E5k"/>
+                <constraint firstItem="CgI-au-vzX" firstAttribute="top" secondItem="rsg-YO-6C8" secondAttribute="bottom" constant="40" id="BOK-Go-4Ik"/>
+                <constraint firstItem="CgI-au-vzX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="IJE-sH-fhA"/>
+                <constraint firstItem="dNW-wa-bGN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="J4x-B7-UvA"/>
+                <constraint firstItem="dNW-wa-bGN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="Knp-W1-Wzk"/>
+                <constraint firstItem="yaI-6q-nWA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="7" id="Nxv-s6-BTq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rsg-YO-6C8" secondAttribute="trailing" constant="20" id="Osg-zl-1t7"/>
+                <constraint firstItem="5GI-KF-OQU" firstAttribute="top" secondItem="dNW-wa-bGN" secondAttribute="bottom" constant="21" id="U8A-SM-6mS"/>
+                <constraint firstItem="rsg-YO-6C8" firstAttribute="top" secondItem="5GI-KF-OQU" secondAttribute="bottom" constant="40" id="b7b-SO-v5D"/>
+                <constraint firstItem="yaI-6q-nWA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="geH-gG-VhC"/>
+                <constraint firstItem="5GI-KF-OQU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kZi-2C-rrB"/>
+                <constraint firstItem="rsg-YO-6C8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="yxl-dh-yOI"/>
+            </constraints>
+            <point key="canvasLocation" x="131" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

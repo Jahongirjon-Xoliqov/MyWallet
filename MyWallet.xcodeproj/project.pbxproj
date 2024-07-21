@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A0B2F762C25989200582719 /* StackWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0B2F752C25989200582719 /* StackWidgetView.swift */; };
 		0A218BC12BA5AB14004DB41D /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A218BC02BA5AB14004DB41D /* ActionButton.swift */; };
 		0A218BC52BA5CADB004DB41D /* TestActionButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A218BC32BA5CADA004DB41D /* TestActionButtonsViewController.swift */; };
 		0A218BC62BA5CADB004DB41D /* TestActionButtonsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A218BC42BA5CADA004DB41D /* TestActionButtonsViewController.xib */; };
@@ -15,12 +16,14 @@
 		0A2D15BF2BE0F5620087D731 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D15BE2BE0F5620087D731 /* Constants.swift */; };
 		0A2D15C22BE105440087D731 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D15C02BE105440087D731 /* MainViewController.swift */; };
 		0A2D15C32BE105440087D731 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A2D15C12BE105440087D731 /* MainViewController.xib */; };
+		0A301A062C47B91D003CE9C2 /* TransferBetweenOwnCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A301A052C47B91D003CE9C2 /* TransferBetweenOwnCardsView.swift */; };
 		0A3875D02BDEA03B0071AEF2 /* UIChartViewForLowerVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3875CF2BDEA03B0071AEF2 /* UIChartViewForLowerVersion.swift */; };
 		0A4304F82BAA2FDC00B4A17C /* RealButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4304F72BAA2FDC00B4A17C /* RealButton.swift */; };
 		0A4BC1B02BE7472600756428 /* ExchangeRatesWidgetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4BC1AE2BE7472600756428 /* ExchangeRatesWidgetCell.swift */; };
 		0A4BC1B12BE7472600756428 /* ExchangeRatesWidgetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A4BC1AF2BE7472600756428 /* ExchangeRatesWidgetCell.xib */; };
 		0A4BC1B42BE7477500756428 /* ExchangeRatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4BC1B32BE7477500756428 /* ExchangeRatesView.swift */; };
 		0A6DAC4B2BEF449B0053C765 /* UICollectionViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6DAC4A2BEF449B0053C765 /* UICollectionViewCell+Extensions.swift */; };
+		0A7898542C17015A0099916D /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7898532C17015A0099916D /* UICollectionView+Extension.swift */; };
 		0A8527CF2BCFF3BA00C26181 /* UserDefaultsBacked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8527CE2BCFF3BA00C26181 /* UserDefaultsBacked.swift */; };
 		0A8527D12BCFF6B400C26181 /* AnyOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8527D02BCFF6B400C26181 /* AnyOptional.swift */; };
 		0A8527D32BCFF88500C26181 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8527D22BCFF88500C26181 /* UserDefaultsExtension.swift */; };
@@ -32,6 +35,8 @@
 		0A8527DF2BD051F600C26181 /* NSLocking+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8527DE2BD051F600C26181 /* NSLocking+Sugar.swift */; };
 		0A8C3AE92BF33E030055DEDE /* UZBBankCardModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C3AE82BF33E030055DEDE /* UZBBankCardModelProtocol.swift */; };
 		0A8C3AEB2BF340570055DEDE /* UZBBankCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C3AEA2BF340570055DEDE /* UZBBankCardViewModel.swift */; };
+		0A8C3AEE2BF4CD110055DEDE /* MockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C3AEC2BF4CD110055DEDE /* MockViewController.swift */; };
+		0A8C3AEF2BF4CD110055DEDE /* MockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A8C3AED2BF4CD110055DEDE /* MockViewController.xib */; };
 		0A8E015B2B93BA71006086BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E015A2B93BA71006086BB /* AppDelegate.swift */; };
 		0A8E015D2B93BA71006086BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E015C2B93BA71006086BB /* SceneDelegate.swift */; };
 		0A8E015F2B93BA71006086BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E015E2B93BA71006086BB /* ViewController.swift */; };
@@ -42,6 +47,9 @@
 		0A8E01762B93BE80006086BB /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A8E01742B93BE80006086BB /* TestViewController.xib */; };
 		0A8E01792B93BF25006086BB /* MonitoringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E01772B93BF25006086BB /* MonitoringViewController.swift */; };
 		0A8E017C2B93BFB2006086BB /* PieSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E017B2B93BFB2006086BB /* PieSlice.swift */; };
+		0A9BA6BC2C4D18E700365DDD /* TBAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9BA6BA2C4D18E700365DDD /* TBAViewController.swift */; };
+		0A9BA6BD2C4D18E700365DDD /* TBAViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A9BA6BB2C4D18E700365DDD /* TBAViewController.xib */; };
+		0A9BA6DE2C4D1C9900365DDD /* TransferDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9BA6DD2C4D1C9900365DDD /* TransferDetails.swift */; };
 		0A9CCB202BD4F06A00E78C33 /* UIChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9CCB1F2BD4F06A00E78C33 /* UIChartView.swift */; };
 		0AA16B2E2BDFC06000A1E31F /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA16B2B2BDFC06000A1E31F /* Money.swift */; };
 		0AA16B2F2BDFC06000A1E31F /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA16B2C2BDFC06000A1E31F /* Currency.swift */; };
@@ -68,6 +76,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A0B2F752C25989200582719 /* StackWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackWidgetView.swift; sourceTree = "<group>"; };
 		0A218BC02BA5AB14004DB41D /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		0A218BC32BA5CADA004DB41D /* TestActionButtonsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestActionButtonsViewController.swift; sourceTree = "<group>"; };
 		0A218BC42BA5CADA004DB41D /* TestActionButtonsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestActionButtonsViewController.xib; sourceTree = "<group>"; };
@@ -76,12 +85,14 @@
 		0A2D15BE2BE0F5620087D731 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0A2D15C02BE105440087D731 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0A2D15C12BE105440087D731 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		0A301A052C47B91D003CE9C2 /* TransferBetweenOwnCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferBetweenOwnCardsView.swift; sourceTree = "<group>"; };
 		0A3875CF2BDEA03B0071AEF2 /* UIChartViewForLowerVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIChartViewForLowerVersion.swift; sourceTree = "<group>"; };
 		0A4304F72BAA2FDC00B4A17C /* RealButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealButton.swift; sourceTree = "<group>"; };
 		0A4BC1AE2BE7472600756428 /* ExchangeRatesWidgetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesWidgetCell.swift; sourceTree = "<group>"; };
 		0A4BC1AF2BE7472600756428 /* ExchangeRatesWidgetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExchangeRatesWidgetCell.xib; sourceTree = "<group>"; };
 		0A4BC1B32BE7477500756428 /* ExchangeRatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesView.swift; sourceTree = "<group>"; };
 		0A6DAC4A2BEF449B0053C765 /* UICollectionViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extensions.swift"; sourceTree = "<group>"; };
+		0A7898532C17015A0099916D /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		0A8527CE2BCFF3BA00C26181 /* UserDefaultsBacked.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsBacked.swift; sourceTree = "<group>"; };
 		0A8527D02BCFF6B400C26181 /* AnyOptional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyOptional.swift; sourceTree = "<group>"; };
 		0A8527D22BCFF88500C26181 /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
@@ -93,6 +104,8 @@
 		0A8527DE2BD051F600C26181 /* NSLocking+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLocking+Sugar.swift"; sourceTree = "<group>"; };
 		0A8C3AE82BF33E030055DEDE /* UZBBankCardModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UZBBankCardModelProtocol.swift; sourceTree = "<group>"; };
 		0A8C3AEA2BF340570055DEDE /* UZBBankCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UZBBankCardViewModel.swift; sourceTree = "<group>"; };
+		0A8C3AEC2BF4CD110055DEDE /* MockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewController.swift; sourceTree = "<group>"; };
+		0A8C3AED2BF4CD110055DEDE /* MockViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MockViewController.xib; sourceTree = "<group>"; };
 		0A8E01572B93BA71006086BB /* MyWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A8E015A2B93BA71006086BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A8E015C2B93BA71006086BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +118,9 @@
 		0A8E01742B93BE80006086BB /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		0A8E01772B93BF25006086BB /* MonitoringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringViewController.swift; sourceTree = "<group>"; };
 		0A8E017B2B93BFB2006086BB /* PieSlice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieSlice.swift; sourceTree = "<group>"; };
+		0A9BA6BA2C4D18E700365DDD /* TBAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBAViewController.swift; sourceTree = "<group>"; };
+		0A9BA6BB2C4D18E700365DDD /* TBAViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TBAViewController.xib; sourceTree = "<group>"; };
+		0A9BA6DD2C4D1C9900365DDD /* TransferDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferDetails.swift; sourceTree = "<group>"; };
 		0A9CCB1F2BD4F06A00E78C33 /* UIChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIChartView.swift; sourceTree = "<group>"; };
 		0AA16B2B2BDFC06000A1E31F /* Money.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
 		0AA16B2C2BDFC06000A1E31F /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
@@ -141,6 +157,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A0B2F742C25984000582719 /* StackWidgetView */ = {
+			isa = PBXGroup;
+			children = (
+				0A0B2F752C25989200582719 /* StackWidgetView.swift */,
+			);
+			path = StackWidgetView;
+			sourceTree = "<group>";
+		};
 		0A218BBF2BA5AB03004DB41D /* ActionButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,8 +192,20 @@
 				0AA56E882BD66C9D00EA6167 /* FloatingPoint+Extension.swift */,
 				0AA16B312BDFC64C00A1E31F /* String+Extensions.swift */,
 				0A6DAC4A2BEF449B0053C765 /* UICollectionViewCell+Extensions.swift */,
+				0A7898532C17015A0099916D /* UICollectionView+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0A301A042C47B8EB003CE9C2 /* TransferBetweenOwnCards */ = {
+			isa = PBXGroup;
+			children = (
+				0A301A052C47B91D003CE9C2 /* TransferBetweenOwnCardsView.swift */,
+				0A9BA6BA2C4D18E700365DDD /* TBAViewController.swift */,
+				0A9BA6BB2C4D18E700365DDD /* TBAViewController.xib */,
+				0A9BA6DD2C4D1C9900365DDD /* TransferDetails.swift */,
+			);
+			path = TransferBetweenOwnCards;
 			sourceTree = "<group>";
 		};
 		0A4BC1AD2BE746A500756428 /* ExchangeRates */ = {
@@ -209,6 +245,10 @@
 		0A8E01592B93BA71006086BB /* MyWallet */ = {
 			isa = PBXGroup;
 			children = (
+				0A9BA6BE2C4D1AFF00365DDD /* TBA */,
+				0A301A042C47B8EB003CE9C2 /* TransferBetweenOwnCards */,
+				0A0B2F742C25984000582719 /* StackWidgetView */,
+				0AE84CDF2C0DE7EA000B1566 /* NearbyInteraction */,
 				0A8C3AEA2BF340570055DEDE /* UZBBankCardViewModel.swift */,
 				0A8C3AE82BF33E030055DEDE /* UZBBankCardModelProtocol.swift */,
 				0AE5CA112BE4BCBF001C530A /* CardViews */,
@@ -240,6 +280,13 @@
 				0AE5CA022BE21572001C530A /* SimpleCollectionViewCell.xib */,
 			);
 			path = MyWallet;
+			sourceTree = "<group>";
+		};
+		0A9BA6BE2C4D1AFF00365DDD /* TBA */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TBA;
 			sourceTree = "<group>";
 		};
 		0AA16B2A2BDFC04D00A1E31F /* Money */ = {
@@ -285,6 +332,8 @@
 				0AE5CA062BE26158001C530A /* Cells */,
 				0A2D15C02BE105440087D731 /* MainViewController.swift */,
 				0A2D15C12BE105440087D731 /* MainViewController.xib */,
+				0A8C3AEC2BF4CD110055DEDE /* MockViewController.swift */,
+				0A8C3AED2BF4CD110055DEDE /* MockViewController.xib */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -325,6 +374,13 @@
 				0AE5CA142BE4BD4F001C530A /* SQBCardView.swift */,
 			);
 			path = CardViews;
+			sourceTree = "<group>";
+		};
+		0AE84CDF2C0DE7EA000B1566 /* NearbyInteraction */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NearbyInteraction;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,10 +445,12 @@
 				0A8E01672B93BA72006086BB /* LaunchScreen.storyboard in Resources */,
 				0AE5CA0C2BE261C0001C530A /* SavedOperationCollectionViewCell.xib in Resources */,
 				0A8E01642B93BA72006086BB /* Assets.xcassets in Resources */,
+				0A8C3AEF2BF4CD110055DEDE /* MockViewController.xib in Resources */,
 				0A2D15C32BE105440087D731 /* MainViewController.xib in Resources */,
 				0AE21E6F2BCEB9FE001462B4 /* MonitoringViewController.xib in Resources */,
 				0A8E01762B93BE80006086BB /* TestViewController.xib in Resources */,
 				0A218BC62BA5CADB004DB41D /* TestActionButtonsViewController.xib in Resources */,
+				0A9BA6BD2C4D18E700365DDD /* TBAViewController.xib in Resources */,
 				0A8E01622B93BA71006086BB /* Main.storyboard in Resources */,
 				0AE5CA042BE21572001C530A /* SimpleCollectionViewCell.xib in Resources */,
 				0A4BC1B12BE7472600756428 /* ExchangeRatesWidgetCell.xib in Resources */,
@@ -408,6 +466,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A9BA6DE2C4D1C9900365DDD /* TransferDetails.swift in Sources */,
 				0A218BC92BA5CE38004DB41D /* NSAttributedString+Extension.swift in Sources */,
 				0A8527CF2BCFF3BA00C26181 /* UserDefaultsBacked.swift in Sources */,
 				0AA16B2E2BDFC06000A1E31F /* Money.swift in Sources */,
@@ -427,9 +486,11 @@
 				0A3875D02BDEA03B0071AEF2 /* UIChartViewForLowerVersion.swift in Sources */,
 				0A8E01792B93BF25006086BB /* MonitoringViewController.swift in Sources */,
 				0AE5CA0B2BE261C0001C530A /* SavedOperationCollectionViewCell.swift in Sources */,
+				0A7898542C17015A0099916D /* UICollectionView+Extension.swift in Sources */,
 				0AE5CA0F2BE261E4001C530A /* CardsContainerCollectionViewCell.swift in Sources */,
 				0ADFE8522BE5629700A57841 /* SavedOperationWidgetView.swift in Sources */,
 				0AA56E872BD6576A00EA6167 /* UIColor+Extension.swift in Sources */,
+				0A8C3AEE2BF4CD110055DEDE /* MockViewController.swift in Sources */,
 				0AB66CEB2BCACDEC00090A98 /* UIView+Extensions.swift in Sources */,
 				0A6DAC4B2BEF449B0053C765 /* UICollectionViewCell+Extensions.swift in Sources */,
 				0A8527DD2BCFFC9400C26181 /* CGPointExtension.swift in Sources */,
@@ -440,9 +501,11 @@
 				0A8527D12BCFF6B400C26181 /* AnyOptional.swift in Sources */,
 				0AA16B362BDFDBC600A1E31F /* KWNumberFormatter.swift in Sources */,
 				0A218BC52BA5CADB004DB41D /* TestActionButtonsViewController.swift in Sources */,
+				0A301A062C47B91D003CE9C2 /* TransferBetweenOwnCardsView.swift in Sources */,
 				0A8527D72BCFFC6500C26181 /* UIViewExtension.swift in Sources */,
 				0A8527D32BCFF88500C26181 /* UserDefaultsExtension.swift in Sources */,
 				0A8E01752B93BE80006086BB /* TestViewController.swift in Sources */,
+				0A0B2F762C25989200582719 /* StackWidgetView.swift in Sources */,
 				0A8527DF2BD051F600C26181 /* NSLocking+Sugar.swift in Sources */,
 				0AA56E892BD66C9D00EA6167 /* FloatingPoint+Extension.swift in Sources */,
 				0A4BC1B02BE7472600756428 /* ExchangeRatesWidgetCell.swift in Sources */,
@@ -452,6 +515,7 @@
 				0A8E015D2B93BA71006086BB /* SceneDelegate.swift in Sources */,
 				0AE0826C2BE7E29A00B0013F /* QuickPayWidgetView.swift in Sources */,
 				0A218BC12BA5AB14004DB41D /* ActionButton.swift in Sources */,
+				0A9BA6BC2C4D18E700365DDD /* TBAViewController.swift in Sources */,
 				0A9CCB202BD4F06A00E78C33 /* UIChartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
